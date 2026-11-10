@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "status": "derived-from-existing-real-recording",
+  "source": "docs/media/en/full-demo.mp4",
+  "source_sha256": "5f0a68105567dcd306483472e8db8f2c229f38548f7967ee5d5f149c6fd2ab41",
+  "output": "docs/media/en/story-demo.mp4",
+  "output_sha256": "4f1deff2fc386c34f742e5dc2ffd7a532ec4a26c3fca7404eadcb875693ccab7",
+  "source_intervals_seconds": [
+    [
+      0,
+      4
+    ],
+    [
+      15,
+      20
+    ],
+    [
+      29,
+      35
+    ],
+    [
+      50,
+      59
+    ]
+  ],
+  "duration_seconds": 24.0,
+  "locale": "en",
+  "no_new_api_request": true,
+  "no_mock_frames": true,
+  "no_generated_ui": true,
+  "has_editorial_cuts": true,
+  "provenance_note": "This is an edited derivative, not a new live API recording. See the original recording evidence.",
+  "visual_review": "contact-sheet-inspected; independent cold-viewer pending"
+}

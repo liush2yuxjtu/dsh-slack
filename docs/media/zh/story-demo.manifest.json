@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "status": "derived-from-existing-real-recording",
+  "source": "docs/media/zh/full-demo.mp4",
+  "source_sha256": "a6f041fa1438f76c95109db854cd2c6d88b1d5598ddc5ae8693260fe5118cf5e",
+  "output": "docs/media/zh/story-demo.mp4",
+  "output_sha256": "7be0ceb1b69b881d45ee2e5777babe2ffe5b23cc94288022c105ff12553411be",
+  "source_intervals_seconds": [
+    [
+      0,
+      5
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      14,
+      20
+    ],
+    [
+      21,
+      25
+    ]
+  ],
+  "duration_seconds": 20.0,
+  "locale": "zh-CN",
+  "no_new_api_request": true,
+  "no_mock_frames": true,
+  "no_generated_ui": true,
+  "has_editorial_cuts": true,
+  "provenance_note": "This is an edited derivative, not a new live API recording. See the original recording evidence.",
+  "visual_review": "contact-sheet-inspected; independent cold-viewer pending"
+}
