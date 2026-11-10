@@ -10,7 +10,9 @@ DSH Slack UI is an open-source [DeepSeek Harness](https://github.com/deepseek-ai
 
 The compact list shows a title, the latest committed assistant summary and real TODO progress. The Thread uses DSH's native conversation renderer, Markdown, tool calls, TODO panel and composer.
 
-![Real English DSH: launch Thread with its conversation and 2/3 TODO progress](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/media/en/snapshot.png)
+![Real English DSH: launch Thread with its conversation and 2/3 TODO progress](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/evidence/ui-review/en.png)
+
+The current UI labels **New task** and **Reply to this task** separately. Technical details are hidden until opened. The recordings below retain the earlier UI; see [current screenshot QA](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/design-qa.md).
 
 ## Watch real DSH threads in 8 seconds
 

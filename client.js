@@ -8,7 +8,7 @@ window.__ModuleLoader__.load({
     const ROW = 132;
     const en = {
       threads: 'Threads', later: 'Later', apps: 'Apps', workspaces: 'Workspaces', chats: 'Chats', about: 'About',
-      search: 'Search DSH…', newThread: 'New thread', rootPlaceholder: 'Start a new conversation…', rootHint: 'Every message starts a new thread', send: 'Send new message', sending: 'Sending…', retry: 'Retry message',
+      search: 'Search DSH…', newThread: 'New thread', rootPlaceholder: 'Describe a new task…', rootHint: 'Starts a separate conversation', send: 'Create task', sending: 'Sending…', retry: 'Retry message',
       empty: 'No conversations yet', emptyHint: 'Send a message below to start your first thread.', noMatch: 'No matching threads', savedEmpty: 'No saved threads', savedHint: 'Save a thread with the pin button to read it later.',
       noReply: 'No assistant reply yet', nonText: 'Assistant sent a non-text message', loading: 'Loading threads…', loadError: 'Summary unavailable. Open the thread to retry.', running: 'Generating…',
       noTasks: 'No tasks', tasks: '{done}/{total}', messages: '{count} messages', updated: 'Updated {time}', thread: 'Thread', choose: 'Choose a thread', chooseHint: 'Continue a conversation here. New messages in the list always start a separate thread.',
@@ -16,11 +16,11 @@ window.__ModuleLoader__.load({
       native: 'Native DSH', restore: 'Open DSH Slack',
       aboutTitle: 'Your conversations, in threads', aboutBody: 'Start each new topic in the message box on the left. Reply inside its thread to keep the full context. Titles, summaries and TODO progress come from your real DSH sessions.',
       aboutNative: 'The thread uses the native DSH conversation, tools, model selector and composer. Task counts come from the native todo_write tool. No tasks are inferred from assistant prose.',
-      aboutClose: 'Back to Chats', sendFailed: 'Message was not accepted. Your draft is kept. Retry to use the same thread.', new: 'New', live: 'DSH workspace', threadCount: '{count} threads',
+      aboutClose: 'Back to Chats', sendFailed: 'Message was not accepted. Your draft is kept. Retry to use the same thread.', new: 'New', newTask: 'New task', replyTask: 'Reply to this task', details: 'Technical details', live: 'DSH workspace', threadCount: '{count} threads',
     };
     const zh = {
       threads: '会话', later: '稍后查看', apps: '应用', workspaces: '工作区', chats: '对话', about: '关于',
-      search: '搜索 DSH…', newThread: '新建会话', rootPlaceholder: '开始一个新对话…', rootHint: '每条消息都创建一个新会话', send: '发送新消息', sending: '正在发送…', retry: '重试消息',
+      search: '搜索 DSH…', newThread: '新建会话', rootPlaceholder: '描述一个新任务…', rootHint: '发送后创建独立会话', send: '创建任务', sending: '正在发送…', retry: '重试消息',
       empty: '暂无会话', emptyHint: '在下方发送消息，开始第一个会话。', noMatch: '没有匹配的会话', savedEmpty: '暂无收藏会话', savedHint: '点击会话右上角的图钉，保存到稍后查看。',
       noReply: '暂无 Assistant 回复', nonText: 'Assistant 发送了非文本消息', loading: '正在加载会话…', loadError: '摘要暂不可用，请打开会话重试。', running: '生成中…',
       noTasks: '暂无任务', tasks: '{done}/{total}', messages: '{count} 条消息', updated: '更新于 {time}', thread: '会话', choose: '选择一个会话', chooseHint: '在这里继续对话。左侧发送的每条新消息都会创建独立会话。',
@@ -28,7 +28,7 @@ window.__ModuleLoader__.load({
       native: '原生 DSH', restore: '打开 DSH Slack',
       aboutTitle: '每个话题，都有独立会话', aboutBody: '在左侧消息框输入新话题。在会话内回复，保留完整上下文。标题、摘要和 TODO 进度来自真实 DSH 会话。',
       aboutNative: '会话使用 DSH 原生消息、工具、模型选择器和输入框。任务数量只来自原生 todo_write 工具，不从回复文案推测。',
-      aboutClose: '返回对话', sendFailed: '消息未被接收，草稿已保留。重试会沿用同一个会话。', new: '新', live: 'DSH 工作区', threadCount: '{count} 个会话',
+      aboutClose: '返回对话', sendFailed: '消息未被接收，草稿已保留。重试会沿用同一个会话。', new: '新', newTask: '新建任务', replyTask: '回复当前任务', details: '技术详情', live: 'DSH 工作区', threadCount: '{count} 个会话',
     };
     const css = `
       .dsh-slack-nav,.dsh-slack-app{--sl-border:var(--dsw-alias-border-l2,#dddde5);--sl-bg:var(--dsw-alias-bg-base,#fff);--sl-text:var(--dsw-alias-label-primary,#1d1c24);--sl-muted:var(--dsw-alias-label-secondary,#64606f);--sl-selected:#e8e0fa;--sl-accent:#6f3bb2;box-sizing:border-box;font-family:var(--dsw-font-family,Arial,sans-serif);font-size:14px}
@@ -43,6 +43,13 @@ window.__ModuleLoader__.load({
       body[data-ds-dark-theme] .dsh-slack-nav,body[data-ds-dark-theme] .dsh-slack-app{--sl-selected:#39284f;--sl-accent:#b990f1}body[data-ds-dark-theme] .dsh-slack-root-submit{background:#7b48b9}body[data-ds-dark-theme] .dsh-slack-progress[data-complete=true]{color:#79cba7}body[data-ds-dark-theme] .dsh-slack-root-error{color:#f2a6a6}
       @media(max-width:1100px){.dsh-slack-columns{grid-template-columns:minmax(260px,310px) minmax(0,1fr)}.dsh-slack-topbar-note{display:none}.dsh-slack-thread-header{padding:15px 17px}.dsh-slack-thread-title{font-size:18px}.dsh-slack-list-header{padding-left:18px;padding-right:18px}}
       @media(max-width:760px){.dsh-slack-columns{display:flex;flex:1}.dsh-slack-list,.dsh-slack-thread{width:100%;flex:1}.dsh-slack-app[data-mobile-thread=false] .dsh-slack-thread{display:none}.dsh-slack-app[data-mobile-thread=true] .dsh-slack-list{display:none}.dsh-slack-back,.dsh-slack-mobile-nav{display:inline-flex}.dsh-slack-topbar{padding:9px 12px;gap:8px;padding-left:max(12px,var(--dsh-frame-leading-clearance,0px))}.dsh-slack-list-header{height:102px;min-height:102px}.dsh-slack-thread-header{height:79px;min-height:79px;padding:12px}.dsh-slack-thread-title{font-size:17px}.dsh-slack-thread-meta{font-size:11px;gap:5px}.dsh-slack-root-input{height:66px}.dsh-slack-thread-empty{padding:22px}}
+
+      .dsh-slack-composer-label,.dsh-slack-reply-label{display:block;margin:0 0 8px;color:var(--sl-text,var(--dsw-alias-label-primary,#1d1c24));font-size:13px;font-weight:600;line-height:20px}
+      .dsh-slack-reply-label{margin:0 12px 6px}
+      .dsh-slack-root-actions span{font-size:12px}.dsh-slack-root-input{font-size:14px!important}
+      .dsh-slack-details-toggle{border:1px solid var(--sl-border);border-radius:6px;background:transparent;color:var(--sl-muted);padding:6px 9px;white-space:nowrap;font-size:12px!important}
+      .dsh-slack-details-toggle[aria-pressed=true]{color:var(--sl-accent);border-color:var(--sl-accent)}
+      .dsh-slack-thread[data-details=false] [data-composer-stat],.dsh-slack-thread[data-details=false] [data-turn-tail] [data-clock=end]>span:last-child>span:has(>button[aria-haspopup=dialog]){display:none}
       @media(prefers-reduced-motion:reduce){.dsh-slack-app *,.dsh-slack-nav *{scroll-behavior:auto!important}}
     `;
     const icon = (glyph, size = 20) => h('svg', { width: size, height: size, className: 'dsh-slack-icon', 'aria-hidden': true }, h('use', { href: `#dsw-icon-${glyph}-regular` }));
@@ -70,12 +77,13 @@ window.__ModuleLoader__.load({
         let enabled = true;
         let stopSidebar;
         let stopConversation;
+        let stopReplyLabel;
         const modeListeners = new Set();
         const modeSource = { getSnapshot: () => enabled, subscribe: callback => { modeListeners.add(callback); return () => modeListeners.delete(callback); } };
         const toggleMode = () => {
           enabled = !enabled;
           if (enabled) mount();
-          else { stopSidebar?.(); stopConversation?.(); stopSidebar = undefined; stopConversation = undefined; }
+          else { stopSidebar?.(); stopConversation?.(); stopReplyLabel?.(); stopSidebar = undefined; stopConversation = undefined; stopReplyLabel = undefined; }
           for (const listener of modeListeners) listener();
         };
         function Sidebar({ collapsed, drawer, useWorkspaces, t }) {
@@ -93,9 +101,7 @@ window.__ModuleLoader__.load({
               h('button', { className: 'dsh-slack-nav-item', 'data-selected': nav.filter === 'later', onClick: () => go({ filter: 'later', workspaceId: null }) }, icon('pin-outline'), t('later')),
               workspaces.items.length > 0 && h('div', { className: 'dsh-slack-nav-label' }, t('workspaces')),
               workspaces.items.map(workspace => h('button', { className: 'dsh-slack-nav-item', key: workspace.workspaceId, 'data-selected': nav.workspaceId === workspace.workspaceId,
-                onClick: () => go({ filter: 'all', workspaceId: workspace.workspaceId }), title: workspace.title }, icon('folder-close'), h('span', { style: { overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' } }, workspace.title))),
-              h('div', { className: 'dsh-slack-nav-label' }, t('apps')),
-              h('button', { className: 'dsh-slack-nav-item', 'data-selected': true, onClick: () => go({ filter: 'all', workspaceId: null }) }, brand(), 'DSH')),
+                onClick: () => go({ filter: 'all', workspaceId: workspace.workspaceId }), title: workspace.title }, icon('folder-close'), h('span', { style: { overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' } }, workspace.title)))),
             h('div', { className: 'dsh-slack-nav-footer' }, h('span', null, t('live')), h('button', { className: 'dsh-slack-native-toggle', onClick: toggleMode }, t('native'))));
         }
 
@@ -109,6 +115,7 @@ window.__ModuleLoader__.load({
           const setDraft = draft => updateRoot({ draft });
           const setSubmission = submission => updateRoot({ submission });
           const [pinError, setPinError] = useState('');
+          const [detailsVisible, setDetailsVisible] = useState(false);
           const [scroll, setScroll] = useState(0);
           const [height, setHeight] = useState(600);
           const [focusedId, setFocusedId] = useState(null);
@@ -193,7 +200,6 @@ window.__ModuleLoader__.load({
           const emptyTitle = query ? 'noMatch' : nav.filter === 'later' ? 'savedEmpty' : list.phase === 'ready' ? 'empty' : 'loading';
           return h('main', { className: 'dsh-slack-app', 'data-mobile-thread': nav.mobileThread, 'aria-label': 'DSH threads' }, h('style', null, css),
             h('div', { className: 'dsh-slack-topbar' },
-              h('button', { className: 'dsh-slack-icon-button dsh-slack-mobile-nav', onClick: () => ctx.layout.toggleSidebar(), 'aria-label': t('openNav') }, icon('panel-left-outline')),
               icon('search-outline'), h('input', { type: 'search', placeholder: t('search'), 'aria-label': t('search'), value: query, onChange: event => { setQuery(event.target.value); navigate({ mobileThread: false }); } }),
               h('span', { className: 'dsh-slack-topbar-note' }, 'DeepSeek Harness')),
             h('div', { className: 'dsh-slack-columns' },
@@ -219,20 +225,26 @@ window.__ModuleLoader__.load({
                             row.running ? h('span', { className: 'dsh-slack-running', role: 'status' }, t('running')) : h('span', { className: 'dsh-slack-todo-labels', title: todos?.items.map(item => item.content).join(' · ') }, todos?.items.map(item => item.content).join(' · ') || t('messages', { count: view?.messageCount || 0 }))));
                       }))),
                 h('form', { className: 'dsh-slack-root-form', onSubmit: submit },
-                  h('div', { className: 'dsh-slack-root-box' }, h('textarea', { className: 'dsh-slack-root-input', ref: rootInput, placeholder: t('rootPlaceholder'), 'aria-label': t('rootPlaceholder'), value: draft, disabled: submission.state === 'sending',
+                  h('label', { className: 'dsh-slack-composer-label', htmlFor: 'dsh-slack-new-task' }, t('newTask')),
+                  h('div', { className: 'dsh-slack-root-box' }, h('textarea', { id: 'dsh-slack-new-task', className: 'dsh-slack-root-input', ref: rootInput, placeholder: t('rootPlaceholder'), 'aria-label': t('rootPlaceholder'), value: draft, disabled: submission.state === 'sending',
                     onChange: event => setDraft(event.target.value), onKeyDown: event => { if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); void submit(); } } }),
                     h('div', { className: 'dsh-slack-root-actions' }, h('span', null, t(submission.state === 'sending' ? 'sending' : 'rootHint')), h('button', { type: 'submit', className: 'dsh-slack-root-submit', disabled: !draft.trim() || submission.state === 'sending', 'aria-label': t('send'), title: t('send') }, icon('send-outline', 17)))),
                   submission.state === 'failed' && h('p', { className: 'dsh-slack-root-error', role: 'alert' }, t('sendFailed'), ' ', h('button', { type: 'button', onClick: submit }, t('retry'))),
                   h('div', { className: 'dsh-slack-root-count' }, t('threadCount', { count: rows.length })))),
-              h('section', { className: 'dsh-slack-thread', 'aria-label': t('thread') },
+              h('section', { className: 'dsh-slack-thread', 'aria-label': t('thread'), 'data-details': detailsVisible },
                 h('header', { className: 'dsh-slack-thread-header' }, h('button', { className: 'dsh-slack-icon-button dsh-slack-back', onClick: () => navigate({ mobileThread: false }), 'aria-label': t('back') }, icon('chevron-left-outline')),
                   h('div', { className: 'dsh-slack-thread-heading' }, h('h1', { className: 'dsh-slack-thread-title' }, titleOf(current) || t('choose')), h('div', { className: 'dsh-slack-thread-meta' }, h('span', null, t('thread')), currentView && h('span', null, '·'), currentView && h('span', null, t('messages', { count: currentView.messageCount })), current && h('span', null, '·'), current && h('span', null, t('updated', { time: timeOf(current.updatedAt) })))),
+                  sessionId && h('button', { className: 'dsh-slack-details-toggle', 'aria-pressed': detailsVisible, onClick: () => setDetailsVisible(value => !value) }, t('details')),
                   sessionId && h('button', { className: 'dsh-slack-icon-button dsh-slack-pin', onClick: pin, 'aria-label': t(pins.has(sessionId) ? 'unpin' : 'pin'), 'aria-pressed': pins.has(sessionId), title: t(pins.has(sessionId) ? 'unpin' : 'pin') }, icon(pins.has(sessionId) ? 'pin-fill' : 'pin-outline'))),
                 pinError && h('p', { role: 'alert', className: 'dsh-slack-root-error' }, pinError),
                 sessionId ? h('div', { className: 'dsh-slack-native' }, renderFactorySlot('conversation.content', { variant: 'embedded', phase: 'active', hero: false }))
                   : h('div', { className: 'dsh-slack-thread-empty' }, h('div', { className: 'dsh-slack-thread-empty-inner' }, brand(), h('h2', null, t('choose')), h('p', null, t('chooseHint')))))));
         }
+        function ReplyLabel({ t }) {
+          return h('p', { className: 'dsh-slack-reply-label' }, t('replyTask'));
+        }
         function mount() {
+          stopReplyLabel = ctx.slots.inject('conversation.input.dock', () => ctx.slots.register({ name: 'conversation.input.dock', id: 'dsh-slack-reply-label', order: 100, locale: NS }, ReplyLabel));
           stopSidebar = ctx.slots.inject('sidebar', () => ctx.slots.register({ name: 'sidebar', priority: -10, locale: NS }, Sidebar));
           stopConversation = ctx.slots.inject('main.conversation', () => ctx.slots.register({ name: 'main.conversation', priority: -10, locale: NS }, Slack));
         }
@@ -245,7 +257,7 @@ window.__ModuleLoader__.load({
         }
         mount();
         ctx.slots.inject('shell.overlay', () => ctx.slots.register({ name: 'shell.overlay', id: 'dsh-slack-restore', locale: NS }, Restore));
-        ctx.effect(() => () => { stopSidebar?.(); stopConversation?.(); modeListeners.clear(); }, 'dsh slack mode cleanup');
+        ctx.effect(() => () => { stopSidebar?.(); stopConversation?.(); stopReplyLabel?.(); modeListeners.clear(); }, 'dsh slack mode cleanup');
       },
     };
   },

@@ -1,0 +1,233 @@
+{
+  "language": "en",
+  "source": {
+    "environment": "repository-build",
+    "commit": "347f8a4d4a6ea5d0e78596a709b022533d733464",
+    "version": "0.1.0",
+    "sourceHashes": {
+      "client.js": "f1c7694290f7dd89e99774dcc3abeecb9a4b44f40350464187139b1c02c51767",
+      "index.mjs": "296bcfe3381df3db42abd97aad6ef0a6dcdc560bc33b64968164e8d869087fc8",
+      "src/projection.mjs": "4b02b88d025e0c8454d54e4570b6289c532ec6970bfbcc059ceb716d78dbb3b8"
+    }
+  },
+  "runtime": {
+    "platform": "linux",
+    "host": "f78c8c8956e1",
+    "browser": "150.0.7871.100",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "dpr": 2
+  },
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "sessions": [
+    "8facece2-c7a0-48b0-acda-190598517080",
+    "4b5e86fa-f797-44e8-92fb-6d8021d19758"
+  ],
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "8facece2-c7a0-48b0-acda-190598517080",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:00.215Z",
+      "responseId": "8848c44f-7767-4b3a-92d7-896ae8cb43b7",
+      "usage": {
+        "input_tokens": 428,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1152,
+        "output_tokens": 80,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_a3GkZkjiPEtlix9DBftF6706",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Write announcement",
+                "status": "completed"
+              },
+              {
+                "content": "Prepare screenshots",
+                "status": "pending"
+              },
+              {
+                "content": "Publish update",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "2077a9fb143cbd70467324d723ef4bdecb1b2c799d542a0af54bb6096e0a826c",
+      "finishedAt": "2026-11-10T15:22:07.926Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "8facece2-c7a0-48b0-acda-190598517080",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:07.965Z",
+      "responseId": "62c75e01-6830-4a2c-b9ce-98fd076397ce",
+      "usage": {
+        "input_tokens": 152,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 15,
+        "service_tier": "standard"
+      },
+      "text": "Checklist set: announcement done; screenshots and publish update still pending.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "a60c8c499ed9a0b850776dd9d2ece333408ccd2fd9455756326d3c605370719f",
+      "finishedAt": "2026-11-10T15:22:09.324Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "4b5e86fa-f797-44e8-92fb-6d8021d19758",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:10.146Z",
+      "responseId": "f8b7042a-1b55-421a-be2d-86fcfb0ec2f7",
+      "usage": {
+        "input_tokens": 422,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1152,
+        "output_tokens": 79,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_sggONBMFqbMDzqUNmuCb8459",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Pick date",
+                "status": "completed"
+              },
+              {
+                "content": "Invite team",
+                "status": "completed"
+              },
+              {
+                "content": "Prepare agenda",
+                "status": "completed"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "3f2ed31c0790b65131c25d0450ec1bcc08ee13d84b0fcdbc092205298dfae6e0",
+      "finishedAt": "2026-11-10T15:22:14.898Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "4b5e86fa-f797-44e8-92fb-6d8021d19758",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:14.966Z",
+      "responseId": "739d0019-0aa9-4cb1-87fc-384f071e6746",
+      "usage": {
+        "input_tokens": 145,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 15,
+        "service_tier": "standard"
+      },
+      "text": "Workshop plan checklist done — date, invites, and agenda all complete.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "5652c0894afdf3e4ceff5ef9326a4f43e50e407ffdef812035bf9ca53c32d2f7",
+      "finishedAt": "2026-11-10T15:22:20.767Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "8facece2-c7a0-48b0-acda-190598517080",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:22.333Z",
+      "responseId": "24f7af1e-1141-436a-bcbf-e47a385590eb",
+      "usage": {
+        "input_tokens": 187,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 80,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_a3HYd7NYOPCuPskhfQXa6317",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Write announcement",
+                "status": "completed"
+              },
+              {
+                "content": "Prepare screenshots",
+                "status": "completed"
+              },
+              {
+                "content": "Publish update",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "d762c273adbee049d94e6b40d23f768f6363b454454c90dae1010cd92135978c",
+      "finishedAt": "2026-11-10T15:22:27.548Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "8facece2-c7a0-48b0-acda-190598517080",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:27.607Z",
+      "responseId": "007017e6-4d7a-46dd-b2c0-1045034f3c5c",
+      "usage": {
+        "input_tokens": 167,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1664,
+        "output_tokens": 13,
+        "service_tier": "standard"
+      },
+      "text": "Done: announcement and screenshots complete; publish update stays pending.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "cb66e317f725d664be7927cfcb80b0b894771ca9bdadc6ddcb8191d4b942e430",
+      "finishedAt": "2026-11-10T15:22:28.552Z"
+    }
+  ],
+  "consoleErrors": [],
+  "kind": "real-browser-screenshot",
+  "screenshot": "en.png",
+  "screenshotSha256": "290c34b49afa4b37952316f7562938b15c09ca4f6381abcfc69d4e97954fba57"
+}

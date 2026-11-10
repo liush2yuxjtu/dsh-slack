@@ -112,7 +112,9 @@ it('verifies independent root messages and contextual threads against actual Dee
         ancestors: Array.from((function* () { for (let p = element; p; p = p.parentElement) yield p; })()).map(p => ({ tag: p.tagName, inert: p.inert, hidden: p.hidden, contentVisibility: getComputedStyle(p).contentVisibility })) };
     }), null, 2));
     await screenshot('01-empty.png');
-    checks.push('installed-external-plugin-in-real-dsh');
+    await expect(page.locator('.dsh-slack-composer-label')).toHaveText('New task');
+    await expect(page.locator('.dsh-slack-nav-body')).not.toContainText('Apps');
+    checks.push('installed-external-plugin-in-real-dsh', 'new-task-label-and-single-navigation');
 
     const submitRoot = async (prompt, marker) => {
       const count = sessions.length;
@@ -230,6 +232,7 @@ it('verifies independent root messages and contextual threads against actual Dee
     await page.locator('.dsh-slack-root-input').fill(nativeDraft);
     await page.getByRole('button', { name: 'Native DSH', exact: true }).click();
     await expect(page.locator('.dsh-slack-app')).toHaveCount(0);
+    await expect(page.locator('.dsh-slack-reply-label')).toHaveCount(0);
     await expect(page.getByRole('button', { name: 'Plugins', exact: true })).toBeVisible();
     const accountMenu = page.getByRole('button', { name: 'Account menu', exact: true });
     if (await accountMenu.count()) {
@@ -273,7 +276,12 @@ it('verifies independent root messages and contextual threads against actual Dee
     checks.push('search-empty-result-and-keyboard-navigation');
 
     await page.setViewportSize({ width: 390, height: 844 });
+    await expect.poll(() => page.getByRole('button', { name: 'Back to threads', exact: true }).evaluate(element => {
+      const box = element.getBoundingClientRect();
+      return document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2)?.closest('button') === element;
+    })).toBe(true);
     assert.ok(await page.locator('body').evaluate(body => body.scrollWidth <= innerWidth + 1), 'Mobile viewport must not overflow horizontally');
+    await expect.poll(() => page.locator('.dsh-slack-nav').evaluate(element => element.getBoundingClientRect().right)).toBeLessThanOrEqual(1);
     await screenshot('05-mobile.png');
     await page.getByRole('button', { name: 'Back to threads', exact: true }).click();
     await expect(page.locator('.dsh-slack-root-input')).toBeVisible();
@@ -294,6 +302,20 @@ it('verifies independent root messages and contextual threads against actual Dee
     checks.push('mobile-without-horizontal-overflow', 'explicit-dsh-dark-with-light-os', 'explicit-dsh-light-with-dark-os');
     const finalTodoHeader = page.getByTestId('todo-panel').getByRole('button').first();
     if (await finalTodoHeader.getAttribute('aria-expanded') !== 'true') await finalTodoHeader.click();
+    await expect(page.locator('.dsh-slack-reply-label')).toHaveText('Reply to this task');
+    const technicalUsage = page.locator('[data-composer-stat="usage"]');
+    await expect(technicalUsage).toBeHidden();
+    await expect(page.getByRole('button', { name: /^Usage \d/ }).last()).toBeHidden();
+    await expect(page.getByRole('button', { name: 'Copy', exact: true }).last()).toBeVisible();
+    await page.locator('.dsh-slack-details-toggle').click();
+    await expect(technicalUsage).toBeVisible();
+    await expect(page.getByRole('button', { name: /^Usage \d/ }).last()).toBeVisible();
+    await expect(page.getByTestId('todo-panel')).toBeVisible();
+    await expect(page.locator('[data-composer-input][contenteditable="true"]').first()).toBeVisible();
+    await screenshot('09-details.png');
+    await page.locator('.dsh-slack-details-toggle').click();
+    await expect(technicalUsage).toBeHidden();
+    checks.push('reply-task-label-and-reversible-technical-details');
     await screenshot('07-final.png');
 
     await observer.settle();
@@ -309,7 +331,7 @@ it('verifies independent root messages and contextual threads against actual Dee
     assert.deepEqual(errors, [], 'Browser console must have no errors');
     assert.ok(usage.length > 0 && usage.every(call => call.usage?.outputTokens > 0));
     assert.deepEqual(await executableSources(), candidateSources, 'Executable candidate changed during acceptance');
-    const files = ['01-empty.png', '02-first-thread.png', '03-desktop.png', '04-reload.png', '05-mobile.png', '05-mobile-list.png', '06-dark.png', '07-final.png', '08-native-settings.png'];
+    const files = ['01-empty.png', '02-first-thread.png', '03-desktop.png', '04-reload.png', '05-mobile.png', '05-mobile-list.png', '06-dark.png', '07-final.png', '08-native-settings.png', '09-details.png'];
     const result = { status: 'PASS', runId, at: new Date().toISOString(), candidateTree: process.env.DSH_CANDIDATE_TREE || null,
       candidateSources, sourceRevision, provider: 'deepseek-official', model,
       liveModel: true, mockedService: false, scriptedModel: false, seededAssistantMessages: false, seededTodoEvents: false,

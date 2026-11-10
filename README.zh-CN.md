@@ -10,7 +10,9 @@ DSH Slack UI 是开源的 [DeepSeek Harness](https://github.com/deepseek-ai/deep
 
 [安装](#安装) · [功能](#功能) · [真实 API 验证](#验证) · [常见问题](#常见问题) · [故障排查](#故障排查)
 
-![真实中文版 DSH：规划发布会话、完整上下文和 2/3 待办进度](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/media/zh/snapshot.png)
+![真实中文版 DSH：规划发布会话、完整上下文和 2/3 待办进度](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/evidence/ui-review/zh.png)
+
+当前界面明确区分「新建任务」和「回复当前任务」，技术统计默认收起。下方视频保留此前版本的界面；[本轮截图与验收](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/design-qa.md)展示当前版本。
 
 ## 8 秒查看真实 DSH 会话与待办
 

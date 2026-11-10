@@ -1,5 +1,9 @@
 # 真实 API 验收
 
+当前界面修复的验收见 [设计对照与真实截图](design-qa.md) 及 [本轮运行记录](evidence/ui-review/result.json)：17 项浏览器检查通过，12 次真实官方 API 响应，console error 为 0。提交前还会从暂存树重新运行完整门禁。
+
+## 初版历史验收
+
 结果为 PASS。本轮于 2026-11-10 17:37 完成，时区为 UTC+8。
 
 实际运行 DSH `0.2.2-rc.1`，上游提交为 `fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159`。机器为 GPT Work 的 Linux 环境。Node.js 为 `v24.22.1`，本机 Chromium 为 `134.0.6998.35`。

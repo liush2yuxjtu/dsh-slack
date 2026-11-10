@@ -1,0 +1,233 @@
+{
+  "language": "zh",
+  "source": {
+    "environment": "repository-build",
+    "commit": "f102b50ed85fe3999a40765809ca70dfe64b359a",
+    "version": "0.1.0",
+    "sourceHashes": {
+      "client.js": "f1c7694290f7dd89e99774dcc3abeecb9a4b44f40350464187139b1c02c51767",
+      "index.mjs": "296bcfe3381df3db42abd97aad6ef0a6dcdc560bc33b64968164e8d869087fc8",
+      "src/projection.mjs": "4b02b88d025e0c8454d54e4570b6289c532ec6970bfbcc059ceb716d78dbb3b8"
+    }
+  },
+  "runtime": {
+    "platform": "linux",
+    "host": "f78c8c8956e1",
+    "browser": "150.0.7871.100",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "dpr": 2
+  },
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "sessions": [
+    "975f3978-0c56-4f29-9bcc-b0a64c96ef53",
+    "d9471048-7e55-40ce-8eff-97cb53757008"
+  ],
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "975f3978-0c56-4f29-9bcc-b0a64c96ef53",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:45.983Z",
+      "responseId": "1b20b0a6-86aa-402e-aa81-adb1ebc98328",
+      "usage": {
+        "input_tokens": 419,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1152,
+        "output_tokens": 78,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_KnaVeNj1pfc3QOFAzIox1946",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "撰写公告",
+                "status": "completed"
+              },
+              {
+                "content": "准备截图",
+                "status": "pending"
+              },
+              {
+                "content": "发布更新",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "3d42c17069c1dc199849016c7ad268be2ba8b02abc151cfc0e5de3d78cfb4551",
+      "finishedAt": "2026-11-10T15:22:52.812Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "975f3978-0c56-4f29-9bcc-b0a64c96ef53",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:52.847Z",
+      "responseId": "4e57ed07-c123-4c97-9d9e-1c8a5fac8b7b",
+      "usage": {
+        "input_tokens": 141,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 20,
+        "service_tier": "standard"
+      },
+      "text": "三项待办已建好：撰写公告已完成，准备截图和发布更新仍待处理。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "cafd7b9f2fa0666393fa64493d4ef7222e5c2a4475e10be2727b55bc2d23f73c",
+      "finishedAt": "2026-11-10T15:22:58.437Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "d9471048-7e55-40ce-8eff-97cb53757008",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:22:59.369Z",
+      "responseId": "e179993d-34d1-48e4-82e3-73aaa52465c3",
+      "usage": {
+        "input_tokens": 417,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1152,
+        "output_tokens": 78,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_qolVqbIV2XujlhQYSuBU1277",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "确定日期",
+                "status": "completed"
+              },
+              {
+                "content": "邀请团队",
+                "status": "completed"
+              },
+              {
+                "content": "准备议程",
+                "status": "completed"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "acb4c5629dbf3115c2649abffb59522d42971eaea7901dce1c567f28ce6d9022",
+      "finishedAt": "2026-11-10T15:23:06.202Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "d9471048-7e55-40ce-8eff-97cb53757008",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:23:06.251Z",
+      "responseId": "23f8cb99-3944-4cf5-bf6a-0457a9e6e68f",
+      "usage": {
+        "input_tokens": 139,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 18,
+        "service_tier": "standard"
+      },
+      "text": "三项待办已创建并标记完成：确定日期、邀请团队、准备议程。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "d2962e3dfd76791ba58a3b1579770d9483ff343f50b9d0cd6ad305c9bad648f7",
+      "finishedAt": "2026-11-10T15:23:12.089Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "975f3978-0c56-4f29-9bcc-b0a64c96ef53",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:23:13.160Z",
+      "responseId": "dab4b50c-e4ad-49c3-b37e-647f0edfd660",
+      "usage": {
+        "input_tokens": 181,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1536,
+        "output_tokens": 78,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_Vh4ITfwopZvsFaCEflXy4931",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "撰写公告",
+                "status": "completed"
+              },
+              {
+                "content": "准备截图",
+                "status": "completed"
+              },
+              {
+                "content": "发布更新",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "fe13ba109de14cf42da5c3b832f186fdab76bf393fd2f09821453393d2576db8",
+      "finishedAt": "2026-11-10T15:23:14.350Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "975f3978-0c56-4f29-9bcc-b0a64c96ef53",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T15:23:14.392Z",
+      "responseId": "a8a241f0-fd07-4fc1-a2ae-f83d86961a65",
+      "usage": {
+        "input_tokens": 159,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1664,
+        "output_tokens": 11,
+        "service_tier": "standard"
+      },
+      "text": "截图已标记完成，只剩发布更新待处理。",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "c2ad69422b657a4919c4c8f68c97a954bdf172a5f7cd56705b71c07039211ae0",
+      "finishedAt": "2026-11-10T15:23:15.593Z"
+    }
+  ],
+  "consoleErrors": [],
+  "kind": "real-browser-screenshot",
+  "screenshot": "zh.png",
+  "screenshotSha256": "37f67a3be9af3b2cf10257ac9a26c82645c15ab9f4c4bf91b3de4096a902b67e"
+}
