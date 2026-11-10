@@ -6,7 +6,17 @@ Slack-style session threads for [DeepSeek Harness](https://github.com/deepseek-a
 
 The compact list shows a title, the latest committed assistant summary and real TODO progress. The Thread uses DSH's native conversation renderer, Markdown, tool calls, TODO panel and composer.
 
-![Real DSH with actual DeepSeek API responses](docs/evidence/07-final.png)
+![Real English DSH: launch Thread with its conversation and 2/3 TODO progress](docs/media/en/snapshot.png)
+
+### Watch the feature in 8 seconds
+
+Select **Plan the launch** in the history list, then expand its native TODO list. The Thread keeps the earlier reply and the updated **2/3** progress. The workshop stays in its own session.
+
+[![8-second real DSH recording: reopen the launch Thread and view its TODOs](docs/media/en/feature-8s.gif)](docs/media/en/feature-8s.mp4)
+
+[Play the 8-second MP4](docs/media/en/feature-8s.mp4) · [Watch the complete recording](docs/media/en/full-demo.mp4) · [Recording evidence](docs/media/README.md)
+
+Recorded in real Chromium on the GPT Work machine with the official DeepSeek API. The short clip reopens an existing Thread. The complete recording shows both new conversations, a contextual reply and actual model waits. No speed changes or generated UI frames.
 
 This is an independent DSH plugin. It is not a Slack integration and does not require a Slack account.
 

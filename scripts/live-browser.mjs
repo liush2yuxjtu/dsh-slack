@@ -42,7 +42,8 @@ try {
       await symlink(directory, local, 'junction');
     }
   }
-  const child = spawn(process.execPath, [join(source, 'node_modules/vitest/vitest.mjs'), 'run', '--config', join(root, 'tests/live.config.mjs')], {
+  const config = process.argv.includes('--record') ? 'tests/record.config.mjs' : 'tests/live.config.mjs';
+  const child = spawn(process.execPath, [join(source, 'node_modules/vitest/vitest.mjs'), 'run', '--config', join(root, config)], {
     cwd: root,
     env: { ...process.env, DSH_SOURCE_ROOT: source, DSH_LIVE_OUTPUT: output, DSH_SNAPSHOT: 'record', DSH_TELEMETRY_MODE: 'DISABLED',
       DSH_CHROMIUM_PATH: process.env.DSH_CHROMIUM_PATH || setting('dsh.chromiumPath') || undefined },

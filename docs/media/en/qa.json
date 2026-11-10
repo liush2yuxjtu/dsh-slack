@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "metadata_pass": true,
+  "language": "en",
+  "source": {
+    "environment": "repository-build",
+    "commit": "c44b9905213f639bb1ecb2c3c7a8980fdf6ede55",
+    "version": "0.1.0",
+    "sourceHashes": {
+      "client.js": "59d79ce7a54214aa72ccdcfaabd55e8ff8bf3ecf9a4e8d0f6e57dbbd1d8bef7c",
+      "index.mjs": "296bcfe3381df3db42abd97aad6ef0a6dcdc560bc33b64968164e8d869087fc8",
+      "src/projection.mjs": "4b02b88d025e0c8454d54e4570b6289c532ec6970bfbcc059ceb716d78dbb3b8"
+    }
+  },
+  "source_environment": "repository-build",
+  "mockedService": false,
+  "raw_sha256": "5f0a68105567dcd306483472e8db8f2c229f38548f7967ee5d5f149c6fd2ab41",
+  "raw_duration_s": 61.866667,
+  "excerpt_source_s": [
+    53.349,
+    61.349
+  ],
+  "result_hold_s": 5.616,
+  "crop_source_pixels": {
+    "x": 280,
+    "y": 0,
+    "width": 1000,
+    "height": 800
+  },
+  "delivered_width": 1280,
+  "video": {
+    "duration_s": 8.0,
+    "codec": "h264",
+    "pix_fmt": "yuv420p",
+    "width": 1280,
+    "height": 1024
+  },
+  "gif": {
+    "duration_s": 8.0,
+    "frames": 96,
+    "loop": 0
+  },
+  "outputs": {
+    "feature-8s.mp4": {
+      "sha256": "b2df0a79e4f672e2e4addb6904fe314012e13c4a9cc0352675cf4e286c4a38e2",
+      "bytes": 203857
+    },
+    "feature-8s.gif": {
+      "sha256": "2bc4754666940bc29e9ec09c379db0e1c4d224b03d93ceee60f1e078cfac4a27",
+      "bytes": 1056423
+    },
+    "full-demo.mp4": {
+      "sha256": "5f0a68105567dcd306483472e8db8f2c229f38548f7967ee5d5f149c6fd2ab41",
+      "bytes": 999222
+    },
+    "snapshot.png": {
+      "sha256": "35a4d320b3257229f909905fc9ae38b9d34ebf866694be7dac5317964ef05a4f",
+      "bytes": 127872
+    },
+    "poster.png": {
+      "sha256": "717cd06272e7facbba4a95cb93810c3021a4ede9bbd86b645174f9fc68e4c74c",
+      "bytes": 314387
+    }
+  },
+  "visual_review": {
+    "status": "PASS",
+    "decision": "keep",
+    "method": "Real delivered poster, decoded GIF/MP4 text measurements, 16-frame and full-recording contact sheets.",
+    "reviewed_by": "primary agent and independent fresh-context cold viewer",
+    "independent_review": "../cold-viewer.md",
+    "scope": "Short clip proves selecting an existing Thread and expanding its native TODO list. Full recording proves creation and actual model processing.",
+    "result_hold_reason": "Keep more than five seconds for reading the conversation and the three tasks.",
+    "limitations": [
+      "Small gray secondary text becomes harder to read when the viewer scales down the recording.",
+      "Native model controls retain the host label DeepSeek Flash Off."
+    ]
+  },
+  "technical_review": {
+    "status": "PASS",
+    "report": "verify/technical-qa.json"
+  }
+}

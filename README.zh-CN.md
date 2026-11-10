@@ -2,7 +2,21 @@
 
 为 DeepSeek Harness 提供按 Thread 组织的会话界面。
 
-在 Chats 输入框发送消息，每条消息创建一个独立 session。在右侧 Thread 回复，继续当前 session。列表显示标题、最新回复摘要和真实 TODO 进度。右侧保留 DSH 原生消息、Markdown、工具和输入框。
+在「对话」列表下方发送消息，每条消息创建一个独立 session。在右侧 Thread 回复，继续当前 session。列表显示标题、最新回复摘要和真实 TODO 进度。右侧保留 DSH 原生消息、Markdown、工具和输入框。
+
+[English](README.md)
+
+![真实中文版 DSH：规划发布会话、完整上下文和 2/3 待办进度](docs/media/zh/snapshot.png)
+
+### 8 秒查看功能
+
+在历史列表点击「规划发布」，展开原生待办清单。此前的回复和更新后的 **2/3** 进度都保留在同一个 Thread 中。「筹备工作坊」使用另一个独立 session。
+
+[![8 秒真实录屏：打开规划发布会话并查看待办](docs/media/zh/feature-8s.gif)](docs/media/zh/feature-8s.mp4)
+
+[播放 8 秒 MP4](docs/media/zh/feature-8s.mp4) · [查看完整原片](docs/media/zh/full-demo.mp4) · [录制与验收证据](docs/media/README.md)
+
+画面来自 GPT Work 机器上的真实 Chromium，使用官方 DeepSeek API。8 秒短片展示重新打开已有 Thread。完整原片包含新建两个会话、继续回复和模型的实际等待时间。没有加速，也没有生成的界面帧。
 
 ## 安装
 

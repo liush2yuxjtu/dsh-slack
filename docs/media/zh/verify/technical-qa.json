@@ -1,0 +1,320 @@
+{
+  "status": "PASS",
+  "language": "zh",
+  "actual_api_responses": 6,
+  "mp4_seconds": 8.0,
+  "mp4_frames": 240,
+  "gif_seconds": 8.0,
+  "gif_frames": 96,
+  "resolution": [
+    1280,
+    1024
+  ],
+  "result_hold_s": 5.527000000000001,
+  "continuous_source_mean_pixel_error": 1.6471748352050781,
+  "gif_mean_pixel_error": 0.22551294962565105,
+  "legibility": {
+    "mp4": {
+      "hero": {
+        "text": "规划发布",
+        "region": [
+          550,
+          90,
+          1200,
+          150
+        ],
+        "box": [
+          566,
+          99,
+          667,
+          137
+        ],
+        "ink_heights_px": [
+          25,
+          26,
+          26,
+          25
+        ],
+        "cap_height_px": 25,
+        "x_height_px": 25,
+        "cjk_glyph_height_px": 26,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "TY 2， wWGsstT 240.48"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "规划 发 布 一 二 YL E3 i. i. v A243"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "TY ATE 广 ”mn"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "规划 发 布 一 三 YL E3 i. ee i. A243"
+          }
+        ],
+        "metric": "cjk_glyph_height_px",
+        "measured_px": 26,
+        "minimum_px": 16,
+        "pass_": true
+      },
+      "operated_label": {
+        "text": "规划发布",
+        "region": [
+          15,
+          215,
+          510,
+          290
+        ],
+        "box": [
+          34,
+          223,
+          117,
+          267
+        ],
+        "ink_heights_px": [
+          20,
+          20
+        ],
+        "cap_height_px": 20,
+        "x_height_px": 20,
+        "cjk_glyph_height_px": 20,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "beret = od ree ops oe «el ee Bo a ee 4 5 ae /T."
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "规划 发 布 18:18 ed reas ro os i oe «Sh ee el oe Bo a eo eo ret oo"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "laced = Shp wesc ae HE CYAN A oe eth eae 4 王立 上 1"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "规划 发 布 18:18 Shp wesc ke + YA mB ete Pr OE eS ac /T."
+          }
+        ],
+        "metric": "cjk_glyph_height_px",
+        "measured_px": 20,
+        "minimum_px": 9,
+        "pass_": true
+      },
+      "secondary_label": {
+        "text": "发布更新",
+        "region": [
+          560,
+          690,
+          1220,
+          880
+        ],
+        "box": [
+          615,
+          821,
+          681,
+          847
+        ],
+        "ink_heights_px": [
+          15,
+          13,
+          14,
+          15,
+          15
+        ],
+        "cap_height_px": 15,
+        "x_height_px": 13,
+        "cjk_glyph_height_px": 16,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "c= 任务 2 已 完成 .1 待 处 理 v e #545 e 准备 截图"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "o=< Om 任务 2 已 完成 . 虐待 处 理 撰写 公告 准备 截图 发 布 更 新"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "c= 任务 2 已 完成 .1 待 处 理 v e #545 e 准备 截图"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "o=< Om 任务 2 已 完成 . 工 待 处 理 撰写 公告 准备 截图 发 布 更 新"
+          }
+        ],
+        "metric": "cjk_glyph_height_px",
+        "measured_px": 16,
+        "minimum_px": 7,
+        "pass_": true
+      }
+    },
+    "gif": {
+      "hero": {
+        "text": "规划发布",
+        "region": [
+          550,
+          90,
+          1200,
+          150
+        ],
+        "box": [
+          566,
+          99,
+          667,
+          137
+        ],
+        "ink_heights_px": [
+          25,
+          26,
+          26,
+          25
+        ],
+        "cap_height_px": 25,
+        "x_height_px": 25,
+        "cjk_glyph_height_px": 26,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "TY 2， mdse TT 240.148"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "规划 发 布 an 一 # os 4 AZ AL | (9 《9"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "TY 2， 六 一 ”mn"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "规划 发 布 an 一 本 4 AZ AL | (9 《9"
+          }
+        ],
+        "metric": "cjk_glyph_height_px",
+        "measured_px": 26,
+        "minimum_px": 16,
+        "pass_": true
+      },
+      "operated_label": {
+        "text": "规划发布",
+        "region": [
+          15,
+          215,
+          510,
+          290
+        ],
+        "box": [
+          33,
+          223,
+          117,
+          267
+        ],
+        "ink_heights_px": [
+          20,
+          20
+        ],
+        "cap_height_px": 20,
+        "x_height_px": 20,
+        "cjk_glyph_height_px": 20,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "leeds ous Shp weet as HE CYAN A oe eth ean oe 4 5 ae /T."
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "规划 发 布 18:18 dl ree rs os ee oe «el oe Bo a no eo ret oo"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "laced - Shp west a HCY ANA oo eB eth eae 忆 r 4 5 ae /Th"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "规划 发 布 18:18 了 上 人 门 os os /人 八 上 To a en ee ret oo"
+          }
+        ],
+        "metric": "cjk_glyph_height_px",
+        "measured_px": 20,
+        "minimum_px": 9,
+        "pass_": true
+      },
+      "secondary_label": {
+        "text": "发布更新",
+        "region": [
+          560,
+          690,
+          1220,
+          880
+        ],
+        "box": [
+          615,
+          821,
+          681,
+          847
+        ],
+        "ink_heights_px": [
+          15,
+          13,
+          14,
+          15,
+          15
+        ],
+        "cap_height_px": 15,
+        "x_height_px": 13,
+        "cjk_glyph_height_px": 16,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "c= 任务 2 已 完成 .1 待 处 理 8 撰写 公告 ° 准备 截图"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "o= Om 任务 2 已 完成 . 工 待 处 理 撰写 公告 准备 截图 发 布 更 新"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "3 任务 2 已 完成 .1 待 处 理 e 撰写 公告 ° 准备 截图"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "OOm Om 任务 2 已 完成 . 工 待 处 理 撰写 公告 准备 截图 发 布 更 新"
+          }
+        ],
+        "metric": "cjk_glyph_height_px",
+        "measured_px": 16,
+        "minimum_px": 7,
+        "pass_": true
+      }
+    }
+  }
+}

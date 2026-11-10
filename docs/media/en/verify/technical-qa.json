@@ -1,0 +1,334 @@
+{
+  "status": "PASS",
+  "language": "en",
+  "actual_api_responses": 6,
+  "mp4_seconds": 8.0,
+  "mp4_frames": 240,
+  "gif_seconds": 8.0,
+  "gif_frames": 96,
+  "resolution": [
+    1280,
+    1024
+  ],
+  "result_hold_s": 5.616,
+  "continuous_source_mean_pixel_error": 1.6731732686360676,
+  "gif_mean_pixel_error": 0.24752858479817708,
+  "legibility": {
+    "mp4": {
+      "hero": {
+        "text": "Plan",
+        "region": [
+          550,
+          90,
+          1200,
+          150
+        ],
+        "box": [
+          567,
+          106,
+          617,
+          126
+        ],
+        "ink_heights_px": [
+          18,
+          19,
+          14,
+          14
+        ],
+        "cap_height_px": 18,
+        "x_height_px": 14,
+        "cjk_glyph_height_px": 19,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "Plan the launch Throaarl . Amaceanac . lindatad He :N? DAA"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "Plan the launch Throad moccaoarnaoc limnAdatad OF:‘N? DAA"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "Plan the launch Throaarl . Amaceanac . lindatad Ae :N? DAA"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "Plan the launch Throad mocecornaoc limndatad OF:‘N? DAA"
+          }
+        ],
+        "metric": "cap_height_px",
+        "measured_px": 18,
+        "minimum_px": 16,
+        "pass_": true
+      },
+      "operated_label": {
+        "text": "Plan",
+        "region": [
+          15,
+          215,
+          510,
+          290
+        ],
+        "box": [
+          34,
+          244,
+          76,
+          261
+        ],
+        "ink_heights_px": [
+          14,
+          15,
+          11,
+          11
+        ],
+        "cap_height_px": 14,
+        "x_height_px": 11,
+        "cjk_glyph_height_px": 15,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "| Plan the launch 06:03 PM CArAAanrekAta maran AAmniaAatas mistkhiiahkinnA rArmmairna"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "Plan the launch 06:03 PM Carn AanrekhAata marlran ArAmntliatsa mrs liaehkinrn rArmmaInra"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "Plan the launch 06:03 PM CArAAanrekAta marlan AAmmniliAtas mistkhiiahkhinnA rArmmairna"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "Plan the launch 06:03 PM Carn AanrekhAata marlran AAmniliatsa mish liakinrn FArmmaInra"
+          }
+        ],
+        "metric": "x_height_px",
+        "measured_px": 11,
+        "minimum_px": 9,
+        "pass_": true
+      },
+      "secondary_label": {
+        "text": "Publish",
+        "region": [
+          560,
+          690,
+          1220,
+          880
+        ],
+        "box": [
+          615,
+          824,
+          669,
+          838
+        ],
+        "ink_heights_px": [
+          11,
+          8,
+          8,
+          11,
+          9,
+          11,
+          8,
+          9,
+          10,
+          9
+        ],
+        "cap_height_px": 11,
+        "x_height_px": 8,
+        "cjk_glyph_height_px": 11,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "$= To-dos 2 completed - 1 pending v e Write announcement e Prepare screenshots Publish update ts ."
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "o= o=- To-dos 2 completed - 1 pending Write announcement Prepare screenshots Publish update x"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "$= To-dos 2 completed - 1 pending v e Write announcement e Prepare screenshots Publish update ls"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "o= o=- To-dos 2 completed - 1 pending Write announcement Prepare screenshots Publish update x"
+          }
+        ],
+        "metric": "x_height_px",
+        "measured_px": 8,
+        "minimum_px": 7,
+        "pass_": true
+      }
+    },
+    "gif": {
+      "hero": {
+        "text": "Plan",
+        "region": [
+          550,
+          90,
+          1200,
+          150
+        ],
+        "box": [
+          567,
+          106,
+          617,
+          126
+        ],
+        "ink_heights_px": [
+          18,
+          19,
+          14,
+          14
+        ],
+        "cap_height_px": 18,
+        "x_height_px": 14,
+        "cjk_glyph_height_px": 19,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "Plan the launch Throaarl . Amaceanac . tltindatad Ae :N? DAA"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "Plan the launch Throasad moccaoarnoc limnAdatad OF:‘N? DAA"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "Plan the launch Throaarl . Amaceanac . tl|indatad Ae :-N? DAA"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "Plan the launch Throasad moccornoc limnAdatad OF:‘N? DAA"
+          }
+        ],
+        "metric": "cap_height_px",
+        "measured_px": 18,
+        "minimum_px": 16,
+        "pass_": true
+      },
+      "operated_label": {
+        "text": "Plan",
+        "region": [
+          15,
+          215,
+          510,
+          290
+        ],
+        "box": [
+          34,
+          244,
+          76,
+          260
+        ],
+        "ink_heights_px": [
+          14,
+          15,
+          11,
+          11
+        ],
+        "cap_height_px": 14,
+        "x_height_px": 11,
+        "cjk_glyph_height_px": 15,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "Plan the launch 06:03 PM CArrAAanrekhAata marland AAmrnril Ata? mistkhiiakinn FArmaAaInrna"
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "Plan the launch 06:03 PM CAarrnAanrerhkhAata marlran AAmnliasa miskeliaehkinA FArmmaAInroa"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "Plan the launch 06:03 PM CArAAanrehkhAata marlan AAmpnriaAatas mistkhiiahkinAn rArmaIirna"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "Plan the launch 06:03 PM CAarrnAanrehkhAata marlran ArAmnliasa mise liaehkinA LAr aAInre"
+          }
+        ],
+        "metric": "x_height_px",
+        "measured_px": 11,
+        "minimum_px": 9,
+        "pass_": true
+      },
+      "secondary_label": {
+        "text": "Publish",
+        "region": [
+          560,
+          690,
+          1220,
+          880
+        ],
+        "box": [
+          615,
+          824,
+          669,
+          838
+        ],
+        "ink_heights_px": [
+          11,
+          8,
+          8,
+          11,
+          9,
+          11,
+          8,
+          9,
+          10,
+          9
+        ],
+        "cap_height_px": 11,
+        "x_height_px": 8,
+        "cjk_glyph_height_px": 11,
+        "ocr_passes": [
+          {
+            "psm": 6,
+            "inverted": false,
+            "text": "$= To-dos 2 completed - 1 pending v ® Write announcement e Prepare screenshots Publish update A ."
+          },
+          {
+            "psm": 11,
+            "inverted": false,
+            "text": "o= on To-dos 2 completed - 1 pending Write announcement Prepare screenshots Publish update x"
+          },
+          {
+            "psm": 6,
+            "inverted": true,
+            "text": "$= To-dos 2 completed - 1 pending v ® Write announcement e Prepare screenshots Publish update tS ,"
+          },
+          {
+            "psm": 11,
+            "inverted": true,
+            "text": "o= o= To-dos 2 completed - 1 pending Write announcement Prepare screenshots Publish update k"
+          }
+        ],
+        "metric": "x_height_px",
+        "measured_px": 8,
+        "minimum_px": 7,
+        "pass_": true
+      }
+    }
+  }
+}

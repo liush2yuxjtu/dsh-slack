@@ -1,0 +1,1281 @@
+{
+  "50fd1dbf-180c-41df-84a4-864cb6c1f3e5": [
+    {
+      "type": "turn/start",
+      "seq": 4,
+      "time": 1794305002157,
+      "data": {
+        "turn": 1
+      }
+    },
+    {
+      "type": "user/message",
+      "seq": 8,
+      "time": 1794305002258,
+      "data": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Plan the launch\nMake a checklist: Write announcement, Prepare screenshots, Publish update. Announcement is done. Keep the others pending. Reply briefly."
+          }
+        ],
+        "source": {
+          "kind": "user",
+          "rpcId": "9311409b-7a60-49a5-8b2e-f3977e57a61c",
+          "clientTimeZone": "Asia/Shanghai"
+        },
+        "role": "user",
+        "id": "2bfab322-5131-4d26-9f43-4b86a815f2af"
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "assistant/message",
+      "seq": 14,
+      "time": 1794305008158,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "tool-call",
+              "id": "call_00_xJWRfqfkXOt2a8K1Y0of6164",
+              "name": "todo_write",
+              "arguments": "{\"todos\": [{\"content\": \"Write announcement\", \"status\": \"completed\"}, {\"content\": \"Prepare screenshots\", \"status\": \"pending\"}, {\"content\": \"Publish update\", \"status\": \"pending\"}]}"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-flash",
+            "replayState": {
+              "response": {
+                "kind": "deepseek-messages",
+                "version": 1,
+                "model": "deepseek-flash"
+              },
+              "blocks": [
+                {
+                  "type": "tool-call"
+                }
+              ]
+            }
+          },
+          "id": "c259d529-ce2b-41c6-8cf1-0f9ac9f10e47"
+        },
+        "usage": {
+          "inputTokens": 1584,
+          "outputTokens": 80,
+          "cacheReadTokens": 0,
+          "cacheWriteTokens": 0,
+          "totalTokens": 1664
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1794305007914,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "tool-call"
+            }
+          },
+          {
+            "type": "tool-call-chunks",
+            "time0": 1794305007916,
+            "index": 0,
+            "dt": [],
+            "id": "call_00_xJWRfqfkXOt2a8K1Y0of6164",
+            "name": "todo_write",
+            "args": [
+              ""
+            ]
+          },
+          {
+            "type": "tool-call-chunks",
+            "time0": 1794305007916,
+            "index": 0,
+            "dt": [
+              1,
+              0,
+              29,
+              0,
+              0,
+              7,
+              1,
+              0,
+              0,
+              1,
+              1,
+              16,
+              1,
+              0,
+              1,
+              0,
+              0,
+              13,
+              1,
+              0,
+              0,
+              1,
+              0,
+              17,
+              1,
+              0,
+              0,
+              0,
+              0,
+              24,
+              1,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0,
+              1,
+              16,
+              14,
+              0,
+              0,
+              0,
+              2,
+              3
+            ],
+            "id": "call_00_xJWRfqfkXOt2a8K1Y0of6164",
+            "args": [
+              "{\"",
+              "t",
+              "odos",
+              "\"",
+              ": ",
+              "[",
+              "{\"",
+              "content",
+              "\":",
+              " \"",
+              "Write",
+              " announcement",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "completed",
+              "\"},",
+              " {\"",
+              "content",
+              "\":",
+              " \"",
+              "Prepare",
+              " screens",
+              "hots",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "pending",
+              "\"},",
+              " {\"",
+              "content",
+              "\":",
+              " \"",
+              "P",
+              "ublish",
+              " update",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "pending",
+              "\"",
+              "}]",
+              "}"
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1794305008133,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "tool-call",
+                "id": "call_00_xJWRfqfkXOt2a8K1Y0of6164",
+                "name": "todo_write",
+                "arguments": "{\"todos\": [{\"content\": \"Write announcement\", \"status\": \"completed\"}, {\"content\": \"Prepare screenshots\", \"status\": \"pending\"}, {\"content\": \"Publish update\", \"status\": \"pending\"}]}"
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305008137,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 1584,
+                "outputTokens": 80,
+                "cacheReadTokens": 0,
+                "cacheWriteTokens": 0,
+                "totalTokens": 1664
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305008138,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "tool-calls"
+              },
+              "replayState": {
+                "response": {
+                  "kind": "deepseek-messages",
+                  "version": 1,
+                  "model": "deepseek-flash"
+                },
+                "blocks": [
+                  {
+                    "type": "tool-call"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "todo/write",
+      "seq": 16,
+      "time": 1794305008192,
+      "data": {
+        "todos": [
+          {
+            "content": "Write announcement",
+            "status": "completed"
+          },
+          {
+            "content": "Prepare screenshots",
+            "status": "pending"
+          },
+          {
+            "content": "Publish update",
+            "status": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "type": "assistant/message",
+      "seq": 20,
+      "time": 1794305009176,
+      "data": {
+        "turn": 1,
+        "step": 2,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "Checklist created: announcement done; screenshots and publishing pending."
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-flash",
+            "replayState": {
+              "response": {
+                "kind": "deepseek-messages",
+                "version": 1,
+                "model": "deepseek-flash"
+              },
+              "blocks": [
+                {
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "id": "6e05286d-ab47-40c9-9832-89baa890857f"
+        },
+        "usage": {
+          "inputTokens": 156,
+          "outputTokens": 13,
+          "cacheReadTokens": 1536,
+          "cacheWriteTokens": 0,
+          "totalTokens": 1705
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1794305009009,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "text"
+            }
+          },
+          {
+            "type": "text-chunks",
+            "time0": 1794305009012,
+            "index": 0,
+            "dt": [
+              90,
+              20,
+              50,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "texts": [
+              "Check",
+              "list",
+              " created",
+              ":",
+              " announcement",
+              " done",
+              ";",
+              " screens",
+              "hots",
+              " and",
+              " publishing",
+              " pending",
+              "."
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1794305009173,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "text",
+                "text": "Checklist created: announcement done; screenshots and publishing pending."
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305009175,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 156,
+                "outputTokens": 13,
+                "cacheReadTokens": 1536,
+                "cacheWriteTokens": 0,
+                "totalTokens": 1705
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305009175,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "stop"
+              },
+              "replayState": {
+                "response": {
+                  "kind": "deepseek-messages",
+                  "version": 1,
+                  "model": "deepseek-flash"
+                },
+                "blocks": [
+                  {
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "turn/end",
+      "seq": 22,
+      "time": 1794305009190,
+      "data": {
+        "turn": 1,
+        "reason": {
+          "kind": "completed"
+        }
+      }
+    },
+    {
+      "type": "turn/start",
+      "seq": 24,
+      "time": 1794305027477,
+      "data": {
+        "turn": 2
+      }
+    },
+    {
+      "type": "user/message",
+      "seq": 27,
+      "time": 1794305027526,
+      "data": {
+        "content": [
+          {
+            "type": "text",
+            "text": "The screenshots are ready. Update the same checklist. Leave publishing for later."
+          }
+        ],
+        "source": {
+          "kind": "user",
+          "rpcId": "3837cb9c-cba2-45bc-82d2-0fd802882947",
+          "clientTimeZone": "Asia/Shanghai"
+        },
+        "role": "user",
+        "id": "84e3a257-688e-4e36-b962-99ad1c5f53b3"
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "assistant/message",
+      "seq": 28,
+      "time": 1794305029044,
+      "data": {
+        "turn": 2,
+        "step": 1,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "tool-call",
+              "id": "call_00_vMYUoxAj9ggIYRdOTpxS6958",
+              "name": "todo_write",
+              "arguments": "{\"todos\": [{\"content\": \"Write announcement\", \"status\": \"completed\"}, {\"content\": \"Prepare screenshots\", \"status\": \"completed\"}, {\"content\": \"Publish update\", \"status\": \"pending\"}]}"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-flash",
+            "replayState": {
+              "response": {
+                "kind": "deepseek-messages",
+                "version": 1,
+                "model": "deepseek-flash"
+              },
+              "blocks": [
+                {
+                  "type": "tool-call"
+                }
+              ]
+            }
+          },
+          "id": "f004197b-e702-4048-a6c1-c4526db1e9b3"
+        },
+        "usage": {
+          "inputTokens": 189,
+          "outputTokens": 80,
+          "cacheReadTokens": 1536,
+          "cacheWriteTokens": 0,
+          "totalTokens": 1805
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1794305028765,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "tool-call"
+            }
+          },
+          {
+            "type": "tool-call-chunks",
+            "time0": 1794305028765,
+            "index": 0,
+            "dt": [],
+            "id": "call_00_vMYUoxAj9ggIYRdOTpxS6958",
+            "name": "todo_write",
+            "args": [
+              ""
+            ]
+          },
+          {
+            "type": "tool-call-chunks",
+            "time0": 1794305028783,
+            "index": 0,
+            "dt": [
+              0,
+              0,
+              246,
+              1,
+              0,
+              2,
+              0,
+              0,
+              1,
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "id": "call_00_vMYUoxAj9ggIYRdOTpxS6958",
+            "args": [
+              "{\"",
+              "t",
+              "odos",
+              "\"",
+              ": ",
+              "[",
+              "{\"",
+              "content",
+              "\":",
+              " \"",
+              "Write",
+              " announcement",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "completed",
+              "\"},",
+              " {\"",
+              "content",
+              "\":",
+              " \"",
+              "Prepare",
+              " screens",
+              "hots",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "completed",
+              "\"},",
+              " {\"",
+              "content",
+              "\":",
+              " \"",
+              "P",
+              "ublish",
+              " update",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "pending",
+              "\"",
+              "}]",
+              "}"
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1794305029043,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "tool-call",
+                "id": "call_00_vMYUoxAj9ggIYRdOTpxS6958",
+                "name": "todo_write",
+                "arguments": "{\"todos\": [{\"content\": \"Write announcement\", \"status\": \"completed\"}, {\"content\": \"Prepare screenshots\", \"status\": \"completed\"}, {\"content\": \"Publish update\", \"status\": \"pending\"}]}"
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305029043,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 189,
+                "outputTokens": 80,
+                "cacheReadTokens": 1536,
+                "cacheWriteTokens": 0,
+                "totalTokens": 1805
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305029043,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "tool-calls"
+              },
+              "replayState": {
+                "response": {
+                  "kind": "deepseek-messages",
+                  "version": 1,
+                  "model": "deepseek-flash"
+                },
+                "blocks": [
+                  {
+                    "type": "tool-call"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "todo/write",
+      "seq": 30,
+      "time": 1794305029052,
+      "data": {
+        "todos": [
+          {
+            "content": "Write announcement",
+            "status": "completed"
+          },
+          {
+            "content": "Prepare screenshots",
+            "status": "completed"
+          },
+          {
+            "content": "Publish update",
+            "status": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "type": "assistant/message",
+      "seq": 34,
+      "time": 1794305029995,
+      "data": {
+        "turn": 2,
+        "step": 2,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "Screenshots marked complete; publishing remains pending."
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-flash",
+            "replayState": {
+              "response": {
+                "kind": "deepseek-messages",
+                "version": 1,
+                "model": "deepseek-flash"
+              },
+              "blocks": [
+                {
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "id": "c95e6ab7-a238-4c9f-b591-e0d9636e39c5"
+        },
+        "usage": {
+          "inputTokens": 169,
+          "outputTokens": 10,
+          "cacheReadTokens": 1664,
+          "cacheWriteTokens": 0,
+          "totalTokens": 1843
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1794305029613,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "text"
+            }
+          },
+          {
+            "type": "text-chunks",
+            "time0": 1794305029613,
+            "index": 0,
+            "dt": [
+              169,
+              30,
+              0,
+              0,
+              4,
+              0,
+              21,
+              156,
+              0
+            ],
+            "texts": [
+              "S",
+              "creens",
+              "hots",
+              " marked",
+              " complete",
+              ";",
+              " publishing",
+              " remains",
+              " pending",
+              "."
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1794305029993,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "text",
+                "text": "Screenshots marked complete; publishing remains pending."
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305029993,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 169,
+                "outputTokens": 10,
+                "cacheReadTokens": 1664,
+                "cacheWriteTokens": 0,
+                "totalTokens": 1843
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305029993,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "stop"
+              },
+              "replayState": {
+                "response": {
+                  "kind": "deepseek-messages",
+                  "version": 1,
+                  "model": "deepseek-flash"
+                },
+                "blocks": [
+                  {
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "turn/end",
+      "seq": 36,
+      "time": 1794305029997,
+      "data": {
+        "turn": 2,
+        "reason": {
+          "kind": "completed"
+        }
+      }
+    }
+  ],
+  "1584e657-d4b9-4745-9d1e-092b68cfec79": [
+    {
+      "type": "turn/start",
+      "seq": 4,
+      "time": 1794305018973,
+      "data": {
+        "turn": 1
+      }
+    },
+    {
+      "type": "user/message",
+      "seq": 8,
+      "time": 1794305019013,
+      "data": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Plan a workshop\nMake a checklist: Pick date, Invite team, Prepare agenda. All three are complete. Reply briefly."
+          }
+        ],
+        "source": {
+          "kind": "user",
+          "rpcId": "0541999b-9c86-4fa2-b752-1d4e0517be2e",
+          "clientTimeZone": "Asia/Shanghai"
+        },
+        "role": "user",
+        "id": "64f1a19e-6830-4205-b387-3b5353c2587e"
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "assistant/message",
+      "seq": 14,
+      "time": 1794305023906,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "tool-call",
+              "id": "call_00_5Xof8Mm5HiNL3eqEH9Qq0196",
+              "name": "todo_write",
+              "arguments": "{\"todos\": [{\"content\": \"Pick date\", \"status\": \"completed\"}, {\"content\": \"Invite team\", \"status\": \"completed\"}, {\"content\": \"Prepare agenda\", \"status\": \"completed\"}]}"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-flash",
+            "replayState": {
+              "response": {
+                "kind": "deepseek-messages",
+                "version": 1,
+                "model": "deepseek-flash"
+              },
+              "blocks": [
+                {
+                  "type": "tool-call"
+                }
+              ]
+            }
+          },
+          "id": "111ab953-999a-46aa-b851-d9d860b2254c"
+        },
+        "usage": {
+          "inputTokens": 426,
+          "outputTokens": 79,
+          "cacheReadTokens": 1152,
+          "cacheWriteTokens": 0,
+          "totalTokens": 1657
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1794305023698,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "tool-call"
+            }
+          },
+          {
+            "type": "tool-call-chunks",
+            "time0": 1794305023699,
+            "index": 0,
+            "dt": [],
+            "id": "call_00_5Xof8Mm5HiNL3eqEH9Qq0196",
+            "name": "todo_write",
+            "args": [
+              ""
+            ]
+          },
+          {
+            "type": "tool-call-chunks",
+            "time0": 1794305023716,
+            "index": 0,
+            "dt": [
+              1,
+              0,
+              17,
+              0,
+              0,
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              19,
+              1,
+              0,
+              0,
+              0,
+              0,
+              22,
+              0,
+              1,
+              0,
+              0,
+              0,
+              12,
+              1,
+              0,
+              0,
+              0,
+              0,
+              21,
+              1,
+              0,
+              0,
+              0,
+              0,
+              23,
+              0,
+              8,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0,
+              19
+            ],
+            "id": "call_00_5Xof8Mm5HiNL3eqEH9Qq0196",
+            "args": [
+              "{\"",
+              "t",
+              "odos",
+              "\"",
+              ": ",
+              "[",
+              "{\"",
+              "content",
+              "\":",
+              " \"",
+              "Pick",
+              " date",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "completed",
+              "\"},",
+              " {\"",
+              "content",
+              "\":",
+              " \"",
+              "Inv",
+              "ite",
+              " team",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "completed",
+              "\"},",
+              " {\"",
+              "content",
+              "\":",
+              " \"",
+              "Prepare",
+              " agenda",
+              "\",",
+              " \"",
+              "status",
+              "\":",
+              " \"",
+              "completed",
+              "\"",
+              "}]",
+              "}"
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1794305023904,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "tool-call",
+                "id": "call_00_5Xof8Mm5HiNL3eqEH9Qq0196",
+                "name": "todo_write",
+                "arguments": "{\"todos\": [{\"content\": \"Pick date\", \"status\": \"completed\"}, {\"content\": \"Invite team\", \"status\": \"completed\"}, {\"content\": \"Prepare agenda\", \"status\": \"completed\"}]}"
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305023905,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 426,
+                "outputTokens": 79,
+                "cacheReadTokens": 1152,
+                "cacheWriteTokens": 0,
+                "totalTokens": 1657
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305023905,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "tool-calls"
+              },
+              "replayState": {
+                "response": {
+                  "kind": "deepseek-messages",
+                  "version": 1,
+                  "model": "deepseek-flash"
+                },
+                "blocks": [
+                  {
+                    "type": "tool-call"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "todo/write",
+      "seq": 16,
+      "time": 1794305023911,
+      "data": {
+        "todos": [
+          {
+            "content": "Pick date",
+            "status": "completed"
+          },
+          {
+            "content": "Invite team",
+            "status": "completed"
+          },
+          {
+            "content": "Prepare agenda",
+            "status": "completed"
+          }
+        ]
+      }
+    },
+    {
+      "type": "assistant/message",
+      "seq": 20,
+      "time": 1794305025168,
+      "data": {
+        "turn": 1,
+        "step": 2,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "Workshop planning checklist is complete: Pick date ✅, Invite team ✅, Prepare agenda ✅."
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-flash",
+            "replayState": {
+              "response": {
+                "kind": "deepseek-messages",
+                "version": 1,
+                "model": "deepseek-flash"
+              },
+              "blocks": [
+                {
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "id": "edd72994-ac22-471b-b7f8-5afbd9822ec3"
+        },
+        "usage": {
+          "inputTokens": 149,
+          "outputTokens": 20,
+          "cacheReadTokens": 1536,
+          "cacheWriteTokens": 0,
+          "totalTokens": 1705
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1794305024963,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "text"
+            }
+          },
+          {
+            "type": "text-chunks",
+            "time0": 1794305024964,
+            "index": 0,
+            "dt": [
+              79,
+              9,
+              25,
+              13,
+              1,
+              0,
+              19,
+              17,
+              0,
+              18,
+              0,
+              0,
+              0,
+              0,
+              0,
+              20,
+              0,
+              0,
+              0
+            ],
+            "texts": [
+              "Works",
+              "hop",
+              " planning",
+              " checklist",
+              " is",
+              " complete",
+              ":",
+              " Pick",
+              " date",
+              " ✅",
+              ",",
+              " Inv",
+              "ite",
+              " team",
+              " ✅",
+              ",",
+              " Prepare",
+              " agenda",
+              " ✅",
+              "."
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1794305025165,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "text",
+                "text": "Workshop planning checklist is complete: Pick date ✅, Invite team ✅, Prepare agenda ✅."
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305025166,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 149,
+                "outputTokens": 20,
+                "cacheReadTokens": 1536,
+                "cacheWriteTokens": 0,
+                "totalTokens": 1705
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1794305025166,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "stop"
+              },
+              "replayState": {
+                "response": {
+                  "kind": "deepseek-messages",
+                  "version": 1,
+                  "model": "deepseek-flash"
+                },
+                "blocks": [
+                  {
+                    "type": "text"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "turn/end",
+      "seq": 22,
+      "time": 1794305025170,
+      "data": {
+        "turn": 1,
+        "reason": {
+          "kind": "completed"
+        }
+      }
+    }
+  ]
+}
