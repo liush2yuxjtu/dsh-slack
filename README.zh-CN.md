@@ -4,19 +4,19 @@ DSH Slack 是开源的 [DeepSeek Harness](https://github.com/deepseek-ai/deepsee
 
 在「对话」列表下方发送消息，每条消息创建一个独立 session。在右侧 Thread 回复，继续当前 session。列表显示标题、最新回复摘要和真实 TODO 进度。右侧保留 DSH 原生消息、Markdown、工具和输入框。
 
-[English](README.md)
+[English](https://github.com/liush2yuxjtu/dsh-slack/blob/main/README.md)
 
 [安装](#安装) · [功能](#功能) · [真实 API 验证](#验证) · [常见问题](#常见问题) · [故障排查](#故障排查)
 
-![真实中文版 DSH：规划发布会话、完整上下文和 2/3 待办进度](docs/media/zh/snapshot.png)
+![真实中文版 DSH：规划发布会话、完整上下文和 2/3 待办进度](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/media/zh/snapshot.png)
 
 ## 8 秒查看真实 DSH 会话与待办
 
 在历史列表点击「规划发布」，展开原生待办清单。此前的回复和更新后的 **2/3** 进度都保留在同一个 Thread 中。「筹备工作坊」使用另一个独立 session。
 
-[![8 秒真实录屏：打开规划发布会话并查看待办](docs/media/zh/feature-8s.gif)](docs/media/zh/feature-8s.mp4)
+[![8 秒真实录屏：打开规划发布会话并查看待办](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/media/zh/feature-8s.gif)](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/zh/feature-8s.mp4)
 
-[播放 8 秒 MP4](docs/media/zh/feature-8s.mp4) · [查看完整原片](docs/media/zh/full-demo.mp4) · [录制与验收证据](docs/media/README.md)
+[播放 8 秒 MP4](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/zh/feature-8s.mp4) · [查看完整原片](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/zh/full-demo.mp4) · [录制与验收证据](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/README.md)
 
 画面来自 GPT Work 机器上的真实 Chromium，使用官方 DeepSeek API。8 秒短片展示重新打开已有 Thread。完整原片包含新建两个会话、继续回复和模型的实际等待时间。没有加速，也没有生成的界面帧。
 
@@ -52,6 +52,8 @@ dsh web
 
 ## 验证
 
+在源码仓库中运行以下命令。媒体验证需要 FFmpeg、Python、Pillow、Tesseract 及英文、简体中文语言数据。完整依赖说明见[录制复现步骤](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/README.md#reproduce)。
+
 ```sh
 npm install
 npm run verify
@@ -64,7 +66,7 @@ node scripts/install-hooks.mjs
 
 最终验收运行真实 DSH、官方 DeepSeek API 和本机 Chromium。模型回复、工具调用、TODO 与 API 响应逐条核对。提交门禁从暂存文件导出候选版本，并重新运行真实 API 验收。缺少凭据或检查失败会拒绝提交。
 
-查看 [验收报告](docs/verification.md)、[设计检查](docs/design-qa.md) 和 [英文说明](README.md)。
+查看 [验收报告](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/verification.md)、[设计检查](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/design-qa.md) 和 [英文说明](https://github.com/liush2yuxjtu/dsh-slack/blob/main/README.md)。
 
 此插件提供 Slack 风格的 DSH 界面，不连接 Slack 服务。
 
@@ -84,7 +86,7 @@ node scripts/install-hooks.mjs
 
 ### 截图与视频是真实运行吗？
 
-是。中英文素材都来自真实 Chromium 和官方 DeepSeek API。[录制证据](docs/media/README.md)保留响应记录、源码哈希、完整原片与媒体 QA。8 秒短片展示会话切换与展开待办；完整原片包含模型的实际等待时间。
+是。中英文素材都来自真实 Chromium 和官方 DeepSeek API。[录制证据](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/README.md)保留响应记录、源码哈希、完整原片与媒体 QA。8 秒短片展示会话切换与展开待办；完整原片包含模型的实际等待时间。
 
 ## 故障排查
 
@@ -98,4 +100,4 @@ node scripts/install-hooks.mjs
 
 ## 项目与许可证
 
-源码与维护：[liush2yuxjtu/dsh-slack](https://github.com/liush2yuxjtu/dsh-slack)。本社区插件采用 [MIT license](LICENSE)。
+源码与维护：[liush2yuxjtu/dsh-slack](https://github.com/liush2yuxjtu/dsh-slack)。本社区插件采用 [MIT license](https://github.com/liush2yuxjtu/dsh-slack/blob/main/LICENSE)。

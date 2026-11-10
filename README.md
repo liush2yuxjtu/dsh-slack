@@ -2,21 +2,21 @@
 
 DSH Slack is an open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin for Slack-style chat threads, session history, assistant summaries, and TODO progress. Start a separate session for each new task, then reply in its Thread to keep the conversation context.
 
-[中文说明](README.zh-CN.md)
+[中文说明](https://github.com/liush2yuxjtu/dsh-slack/blob/main/README.zh-CN.md)
 
 [Install](#install) · [Features](#features) · [Real API verification](#verify) · [FAQ](#faq) · [Troubleshooting](#troubleshooting)
 
 The compact list shows a title, the latest committed assistant summary and real TODO progress. The Thread uses DSH's native conversation renderer, Markdown, tool calls, TODO panel and composer.
 
-![Real English DSH: launch Thread with its conversation and 2/3 TODO progress](docs/media/en/snapshot.png)
+![Real English DSH: launch Thread with its conversation and 2/3 TODO progress](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/media/en/snapshot.png)
 
 ## Watch real DSH threads in 8 seconds
 
 Select **Plan the launch** in the history list, then expand its native TODO list. The Thread keeps the earlier reply and the updated **2/3** progress. The workshop stays in its own session.
 
-[![8-second real DSH recording: reopen the launch Thread and view its TODOs](docs/media/en/feature-8s.gif)](docs/media/en/feature-8s.mp4)
+[![8-second real DSH recording: reopen the launch Thread and view its TODOs](https://raw.githubusercontent.com/liush2yuxjtu/dsh-slack/main/docs/media/en/feature-8s.gif)](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/en/feature-8s.mp4)
 
-[Play the 8-second MP4](docs/media/en/feature-8s.mp4) · [Watch the complete recording](docs/media/en/full-demo.mp4) · [Recording evidence](docs/media/README.md)
+[Play the 8-second MP4](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/en/feature-8s.mp4) · [Watch the complete recording](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/en/full-demo.mp4) · [Recording evidence](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/README.md)
 
 Recorded in real Chromium on the GPT Work machine with the official DeepSeek API. The short clip reopens an existing Thread. The complete recording shows both new conversations, a contextual reply and actual model waits. No speed changes or generated UI frames.
 
@@ -34,7 +34,7 @@ This is an independent DSH plugin. It is not a Slack integration and does not re
 | Use native DSH tools | Keep the host's Markdown renderer, tool calls, TODO panel, and composer. |
 | Open host settings | Switch to **Native DSH** for Settings and Plugins, then return with your draft preserved. |
 
-See [design QA](docs/design-qa.md) for desktop, mobile, and theme checks.
+See [design QA](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/design-qa.md) for desktop, mobile, and theme checks.
 
 ## Install
 
@@ -67,6 +67,8 @@ User and model-generated titles come from DSH session metadata. The first user l
 
 Fast checks use the projection reducer and the distributable package. Final acceptance requires the actual DeepSeek service and real local Chromium.
 
+Run these commands from a source checkout with development dependencies available. Media verification requires FFmpeg, Python, Pillow, Tesseract, and its English and Simplified Chinese language data. See the [recording prerequisites](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/README.md#reproduce).
+
 ```sh
 npm run verify
 npm run verify:media
@@ -80,7 +82,7 @@ The live test installs this external package into a real DSH profile. It creates
 
 The Git hook exports the staged tree and runs a fresh real API E2E before every commit. Missing credentials or a failed check refuse the commit. There is no mock fallback. Credentials, authentication URLs and runtime files are excluded from Git.
 
-See [the verification report](docs/verification.md) and [design QA](docs/design-qa.md).
+See [the verification report](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/verification.md) and [design QA](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/design-qa.md).
 
 ## Compatibility
 
@@ -102,7 +104,7 @@ Conversations use normal DSH persistence. Configure your DeepSeek API credential
 
 ### Are the screenshots and videos real?
 
-Yes. Both language versions come from real Chromium with the official DeepSeek API. The [recording evidence](docs/media/README.md) links response records, source hashes, full recordings, and media QA. The 8-second clips show navigation and TODO expansion. Full recordings include actual model waits.
+Yes. Both language versions come from real Chromium with the official DeepSeek API. The [recording evidence](https://github.com/liush2yuxjtu/dsh-slack/blob/main/docs/media/README.md) links response records, source hashes, full recordings, and media QA. The 8-second clips show navigation and TODO expansion. Full recordings include actual model waits.
 
 ## Troubleshooting
 
@@ -116,4 +118,4 @@ Yes. Both language versions come from real Chromium with the official DeepSeek A
 
 ## Project and license
 
-Source and maintenance: [liush2yuxjtu/dsh-slack](https://github.com/liush2yuxjtu/dsh-slack). This independent community plugin uses the [MIT license](LICENSE).
+Source and maintenance: [liush2yuxjtu/dsh-slack](https://github.com/liush2yuxjtu/dsh-slack). This independent community plugin uses the [MIT license](https://github.com/liush2yuxjtu/dsh-slack/blob/main/LICENSE).

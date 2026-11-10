@@ -7,7 +7,7 @@
   "main": "./index.mjs",
   "types": "./index.d.ts",
   "exports": { ".": { "types": "./index.d.ts", "default": "./index.mjs" }, "./client": "./client.js", "./package.json": "./package.json" },
-  "files": ["index.mjs", "index.d.ts", "client.js", "src", "cordis.patch.yml", "README.md", "LICENSE"],
+  "files": ["index.mjs", "index.d.ts", "client.js", "src", "cordis.patch.yml", "README.md", "README.zh-CN.md", "LICENSE"],
   "engines": { "node": ">=24.9.0", "dsh": ">=0.2.2-rc.1 <0.3.0" },
   "dsh": {
     "bundle": { "patch": "./cordis.patch.yml" },
@@ -21,5 +21,6 @@
   "dependencies": { "zod": "4.4.3" },
   "peerDependencies": { "@deepseek-ai/cordis": "^4.1.0", "@deepseek-ai/dsh-session-projection": "0.2.2-rc.1" },
   "repository": { "type": "git", "url": "git+https://github.com/liush2yuxjtu/dsh-slack.git" },
-  "keywords": ["dsh", "dsh-plugin", "deepseek", "deepseek-harness", "slack", "threads", "session-history", "todo"]
+  "homepage": "https://github.com/liush2yuxjtu/dsh-slack#readme",
+  "keywords": ["dsh", "dsh-plugin", "dsh-plugins", "deepseek", "deepseek-harness", "slack", "threads", "chat-history", "session-history", "session-management", "agent-ui", "todo", "markdown"]
 }
