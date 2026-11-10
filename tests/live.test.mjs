@@ -51,6 +51,8 @@ it('verifies independent root messages and contextual threads against actual Dee
   const checks = [];
   const usage = [];
   const sessions = [];
+  const network = [];
+  const timings = {};
   const step = async label => {
     await appendFile(join(output, 'progress.jsonl'), JSON.stringify({ at: new Date().toISOString(), label }) + '\n');
     console.log('LIVE_STEP', label);
@@ -88,6 +90,19 @@ it('verifies independent root messages and contextual threads against actual Dee
     cdp = await page.context().newCDPSession(page);
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+    page.on('request', request => network.push({ at: Date.now(), kind: 'request', path: new URL(request.url()).pathname, method: request.method() }));
+    page.on('requestfailed', request => network.push({ at: Date.now(), kind: 'failed', path: new URL(request.url()).pathname, error: request.failure()?.errorText }));
+    page.on('response', async response => {
+      const path = new URL(response.url()).pathname;
+      const entry = { at: Date.now(), kind: 'response', path, status: response.status() };
+      network.push(entry);
+      if (path === '/api/session/list') {
+        try {
+          const result = await response.json();
+          entry.result = { ok: result.ok, error: result.error, items: result.value?.items?.length };
+        } catch {}
+      }
+    });
     await page.goto(scaffold.authenticatedUrl, { waitUntil: 'domcontentloaded' });
     await expect(page.locator('.dsh-slack-root-input')).toBeVisible({ timeout: 30000 });
     await writeFile(join(output, 'input-preflight.json'), JSON.stringify(await page.locator('.dsh-slack-root-input').evaluate(element => {
@@ -198,11 +213,16 @@ it('verifies independent root messages and contextual threads against actual Dee
     assert.equal(await page.locator('.dsh-slack-card').count(), 4);
     assert.ok(await page.locator('body').evaluate(body => body.scrollWidth <= innerWidth + 1));
 
+    const reloadStarted = Date.now();
+    const catalogAfterReload = page.waitForResponse(response => new URL(response.url()).pathname === '/api/session/list' && response.status() === 200, { timeout: 60000 });
     await page.reload({ waitUntil: 'domcontentloaded' });
+    await catalogAfterReload;
+    timings.reloadCatalogMs = Date.now() - reloadStarted;
     const restored = page.locator(`.dsh-slack-card[data-session-id="${first.agent.session.id}"]`);
     await expect(restored).toHaveAttribute('aria-selected', 'true', { timeout: 30000 });
     await expect(restored.locator('.dsh-slack-progress')).toContainText('2/3');
     await expect(restored.locator('.dsh-slack-summary')).toContainText(nonce);
+    timings.reloadRestoredMs = Date.now() - reloadStarted;
     await screenshot('04-reload.png');
     checks.push('reload-restores-selection-tasks-and-summary');
 
@@ -294,7 +314,7 @@ it('verifies independent root messages and contextual threads against actual Dee
       candidateSources, sourceRevision, provider: 'deepseek-official', model,
       liveModel: true, mockedService: false, scriptedModel: false, seededAssistantMessages: false, seededTodoEvents: false,
       machine: { platform: process.platform, node: process.version, browser: await browser.version(), viewport: { width: 1672, height: 941 } },
-      input: layout, expectedWidth, sessions, provenance, checks, calls: observer.receipts, usage, consoleErrors: errors,
+      input: layout, expectedWidth, sessions, provenance, checks, timings, calls: observer.receipts, usage, consoleErrors: errors,
       finalAssistantText: textOf(finalMessage), finalTodos: todos,
       screenshots: Object.fromEntries(await Promise.all(files.map(async file => [file, hash(await readFile(join(output, file)))]))),
     };
@@ -316,6 +336,7 @@ it('verifies independent root messages and contextual threads against actual Dee
       await writeFile(join(output, 'failure-visible.txt'), await page.locator('body').innerText()).catch(() => {});
     }
     await writeFile(join(output, 'failure.json'), JSON.stringify({ status: 'FAIL', error: String(error), errors, usage, calls: observer.receipts }, null, 2));
+    await writeFile(join(output, 'failure-network.json'), JSON.stringify(network, null, 2));
     if (scaffold) await writeFile(join(output, 'failure-event-metadata.json'), JSON.stringify(scaffold.ctx.agents.list().map(agent => ({ sessionId: agent.session.id,
       events: agent.session.snapshotEvents().map(event => ({ type: event.type, seq: event.seq,
         ...(event.type === 'user/message' ? { source: event.data.source } : {}),

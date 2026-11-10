@@ -1,8 +1,10 @@
-# DSH Slack plugin for DeepSeek Harness
+# DSH Slack UI plugin for DeepSeek Harness
 
-DSH Slack is an open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin for Slack-style chat threads, session history, assistant summaries, and TODO progress. Start a separate session for each new task, then reply in its Thread to keep the conversation context.
+DSH Slack UI is an open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin for Slack-style chat threads, session history, assistant summaries, and TODO progress. Start a separate session for each new task, then reply in its Thread to keep the conversation context.
 
 [中文说明](https://github.com/liush2yuxjtu/dsh-slack/blob/main/README.zh-CN.md)
+
+[Product website](https://liush2yuxjtu.github.io/dsh-slack/) · [Installation guide](https://liush2yuxjtu.github.io/dsh-slack/install/) · [Real video demo](https://liush2yuxjtu.github.io/dsh-slack/demo/)
 
 [Install](#install) · [Features](#features) · [Real API verification](#verify) · [FAQ](#faq) · [Troubleshooting](#troubleshooting)
 

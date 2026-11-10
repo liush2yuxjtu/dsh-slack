@@ -12,7 +12,7 @@ assert.equal(pkg.dsh.client.platform, 'web');
 assert.ok(pkg.dsh.client.inject.includes('@deepseek-ai/dsh-client-ui-conversation'));
 for (const file of ['index.mjs', 'client.js', 'cordis.patch.yml', 'README.md', 'LICENSE']) await access(join(root, file));
 const files = ['index.mjs', 'client.js'];
-for (const directory of ['src', 'scripts', 'tests', 'examples']) {
+for (const directory of ['src', 'scripts', 'tests', 'examples', 'docs/assets']) {
   for (const file of await readdir(join(root, directory), { recursive: true })) if (/\.(?:mjs|js)$/.test(file)) files.push(directory + '/' + file);
 }
 for (const file of files) {

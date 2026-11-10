@@ -17,10 +17,10 @@
       "inject": ["@deepseek-ai/dsh-client-ui-layout", "@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-client-ui-workspace", "@deepseek-ai/dsh-client-ui-renderer", "@deepseek-ai/dsh-api-session-controller", "@deepseek-ai/dsh-api-workspace-controller", "@deepseek-ai/dsh-client-locale"]
     }
   },
-  "scripts": { "test": "node --test tests/projection.test.mjs", "build": "node scripts/check.mjs", "verify": "npm test && npm run build", "verify:live": "node scripts/live-browser.mjs", "record:feature": "node scripts/live-browser.mjs --record", "verify:media": "python scripts/verify-recorded-media.py docs/media/en docs/media/zh", "verify:commit": "node scripts/pre-commit.mjs", "install:hooks": "node scripts/install-hooks.mjs" },
+  "scripts": { "test": "node --test tests/projection.test.mjs", "build": "node scripts/check.mjs", "verify": "npm test && npm run build && npm run verify:site", "build:site": "python scripts/build-site.py", "verify:site": "node scripts/verify-site.mjs", "verify:live": "node scripts/live-browser.mjs", "record:feature": "node scripts/live-browser.mjs --record", "verify:media": "python scripts/verify-recorded-media.py docs/media/en docs/media/zh", "verify:commit": "node scripts/pre-commit.mjs", "install:hooks": "node scripts/install-hooks.mjs" },
   "dependencies": { "zod": "4.4.3" },
   "peerDependencies": { "@deepseek-ai/cordis": "^4.1.0", "@deepseek-ai/dsh-session-projection": "0.2.2-rc.1" },
   "repository": { "type": "git", "url": "git+https://github.com/liush2yuxjtu/dsh-slack.git" },
-  "homepage": "https://github.com/liush2yuxjtu/dsh-slack#readme",
+  "homepage": "https://liush2yuxjtu.github.io/dsh-slack/",
   "keywords": ["dsh", "dsh-plugin", "dsh-plugins", "deepseek", "deepseek-harness", "slack", "threads", "chat-history", "session-history", "session-management", "agent-ui", "todo", "markdown"]
 }
