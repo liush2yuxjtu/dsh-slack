@@ -1,0 +1,650 @@
+{
+  "status": "PASS",
+  "runId": "105dcbde-e961-4e51-acdb-4c63c5b9dd02",
+  "at": "2026-11-10T09:37:05.170Z",
+  "candidateTree": null,
+  "candidateSources": {
+    "client.js": "59d79ce7a54214aa72ccdcfaabd55e8ff8bf3ecf9a4e8d0f6e57dbbd1d8bef7c",
+    "cordis.patch.yml": "db12ffc4886b10fe1535974c539f94a4e33f495f0037fb3efd858e963728d191",
+    "index.mjs": "296bcfe3381df3db42abd97aad6ef0a6dcdc560bc33b64968164e8d869087fc8",
+    "package.json": "b1dfbbf88bde75f904a29716f168fb732ef518e39cdf061e4c9bd250896c54f4",
+    "scripts/check.mjs": "31a6c0baf71ae29884631f0746eaeac6047f0c1d8659d95c33634293c3940a5f",
+    "scripts/install-hooks.mjs": "a3d8a0751e9c77411d3ebcb15ab589c52deaf64ec79e036982896eb458c3f5ac",
+    "scripts/live-browser.mjs": "ca24e31d0e54ebd961f3566fb0c08f6f5611c2b73d1b236a3fb094ba605bfaf1",
+    "scripts/pre-commit.mjs": "6444b3b2d5aa9eb0343bcf084fdcdb0362c48fa1f34af66fba246068e2a04850",
+    "src/projection.mjs": "4b02b88d025e0c8454d54e4570b6289c532ec6970bfbcc059ceb716d78dbb3b8",
+    "tests/live-proof.mjs": "7ec197128ce9880aa52ce592b7922142220e3abfa774206f0c5b8fd1575bfe8f",
+    "tests/live.config.mjs": "2f8843f2361a21715cc27f739ad061ae6fe589d2750d8de75879f1cbe5aea843",
+    "tests/live.test.mjs": "57cc010f8d24de514c04602b8c06d780642db8050959beb5b6f5ebc3ba73a8f6",
+    "tests/projection.test.mjs": "e7e4553e4a63c42cf195e3f0095164eab5ef1c079fb0be6dba8485b4fa272fe7"
+  },
+  "sourceRevision": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "provider": "deepseek-official",
+  "model": "deepseek-flash",
+  "liveModel": true,
+  "mockedService": false,
+  "scriptedModel": false,
+  "seededAssistantMessages": false,
+  "seededTodoEvents": false,
+  "machine": {
+    "platform": "linux",
+    "node": "v24.22.1",
+    "browser": "134.0.6998.35",
+    "viewport": {
+      "width": 1672,
+      "height": 941
+    }
+  },
+  "input": {
+    "nonce": "105dcbde",
+    "width": 1470,
+    "navigation": 240,
+    "history": 360
+  },
+  "expectedWidth": 870,
+  "sessions": [
+    "74a058d2-3f64-4434-a385-585d266f502e",
+    "40d14e77-8657-435c-a6ab-922299e83925",
+    "1997cb35-7fae-467e-ac2a-41a3f594e5dd",
+    "4cef9792-5e79-4cfc-939b-c37e126d151d"
+  ],
+  "provenance": {
+    "apiResponses": 6,
+    "nativeToolCalls": 4,
+    "todoWrites": 3
+  },
+  "checks": [
+    "installed-external-plugin-in-real-dsh",
+    "four-root-messages-create-four-independent-sessions",
+    "native-todo-counts-and-real-model-summaries",
+    "unsent-root-draft-survives-thread-switch",
+    "native-thread-reply-preserves-context-and-session",
+    "todo-and-summary-update-after-follow-up",
+    "native-full-todo-list-in-thread",
+    "reload-restores-selection-tasks-and-summary",
+    "native-settings-and-plugin-access-restored",
+    "draft-survives-native-navigation-round-trip",
+    "native-save-for-later-and-remove",
+    "search-empty-result-and-keyboard-navigation",
+    "mobile-without-horizontal-overflow",
+    "explicit-dsh-dark-with-light-os",
+    "explicit-dsh-light-with-dark-os"
+  ],
+  "calls": [
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "74a058d2-3f64-4434-a385-585d266f502e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:18.935Z",
+      "responseId": "f61f1dae-b290-40cc-b28d-73297e8684d6",
+      "usage": {
+        "input_tokens": 623,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 54,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_sDTNaBQtTa3Drrqul5lw0912",
+          "name": "read",
+          "arguments": {
+            "file_path": "/tmp/dsh-web-e2e-ws-iYbMvf/layout.json"
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "0762a11b614355d86194d187af526bbf20b2a1f3687ffc460598bb4f55f51ba9",
+      "finishedAt": "2026-11-10T09:36:25.247Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "74a058d2-3f64-4434-a385-585d266f502e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:25.303Z",
+      "responseId": "a5e4c2e8-c0c0-4f8e-b784-bd672c42f24b",
+      "usage": {
+        "input_tokens": 140,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 87,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_G6sSm5tFoGFA9XWd1lWi6969",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Review current UI issues",
+                "status": "in_progress"
+              },
+              {
+                "content": "Design simplified thread layout",
+                "status": "pending"
+              },
+              {
+                "content": "Run a quick user test",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "8719179616719e3c9ac244247accd2d7e3190d2bdd6bc81c1b58ab2743ae4b3c",
+      "finishedAt": "2026-11-10T09:36:26.849Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "74a058d2-3f64-4434-a385-585d266f502e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:26.886Z",
+      "responseId": "196001f6-ca00-4ab9-99d1-a8120362afe1",
+      "usage": {
+        "input_tokens": 255,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1920,
+        "output_tokens": 85,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_vXdag5fP5ntaG2Pbkrjm4123",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Review current UI issues",
+                "status": "completed"
+              },
+              {
+                "content": "Design simplified thread layout",
+                "status": "pending"
+              },
+              {
+                "content": "Run a quick user test",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "aa94b1a6fa1941f2dd991b6a5e014e1e29815c2c0007e62e0e5166cb4d511653",
+      "finishedAt": "2026-11-10T09:36:28.323Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "74a058d2-3f64-4434-a385-585d266f502e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:28.349Z",
+      "responseId": "64489cf4-4890-400f-a08d-9a34befff6fe",
+      "usage": {
+        "input_tokens": 240,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2048,
+        "output_tokens": 89,
+        "service_tier": "standard"
+      },
+      "text": "I reviewed the layout before completing the first step. Let me record the details.\n\nReviewed the layout file (nonce **105dcbde**): total width 1470 px, with 240 px navigation and 360 px history.\n\n- Computed thread width: **1470 − 240 − 360 = 870 px**\n- Next up: designing the simplified thread layout and running a quick user test.\n\nNo files were edited.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "16cc5a5626d7c7b0d82cd7975be9fcdd9eddead444b778a1d93390e8863f815f",
+      "finishedAt": "2026-11-10T09:36:30.139Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "40d14e77-8657-435c-a6ab-922299e83925",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:30.618Z",
+      "responseId": "3c553511-d760-4fbe-b58f-d84b6f6ffffb",
+      "usage": {
+        "input_tokens": 578,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 77,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_D1WH7TNspvCsTpIjK8JA0617",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Session API",
+                "status": "completed"
+              },
+              {
+                "content": "Persistence",
+                "status": "completed"
+              },
+              {
+                "content": "Test",
+                "status": "completed"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "9639ef3805b0896279e03035cbc2c6d402bd546faa0d7208cc7ec3167f7589f6",
+      "finishedAt": "2026-11-10T09:36:34.829Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "40d14e77-8657-435c-a6ab-922299e83925",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:35.121Z",
+      "responseId": "7513d669-ca95-41f6-9463-bc32c12100d6",
+      "usage": {
+        "input_tokens": 171,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1792,
+        "output_tokens": 31,
+        "service_tier": "standard"
+      },
+      "text": "Multi-session support (marker 105dcbde-independent-0) is complete, with the session API, persistence, and tests all done.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "5cbc25d60945b9b248bbebfb438a08bf84b080717e4d92d1b12d0ebc3dcc6eb9",
+      "finishedAt": "2026-11-10T09:36:36.716Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "1997cb35-7fae-467e-ac2a-41a3f594e5dd",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:37.058Z",
+      "responseId": "18eb613c-a237-4108-a0bf-5d69a9bdb180",
+      "usage": {
+        "input_tokens": 580,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 80,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_r4muYwNCcAsSa4eEbhdB3803",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Sync API",
+                "status": "completed"
+              },
+              {
+                "content": "UI update",
+                "status": "completed"
+              },
+              {
+                "content": "E2E test",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "b40873b6090b098d9259332d9b632859dca5b220129abe259904319d2c359195",
+      "finishedAt": "2026-11-10T09:36:38.285Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "1997cb35-7fae-467e-ac2a-41a3f594e5dd",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:38.330Z",
+      "responseId": "876272dd-67ad-41b2-bf90-157a45465e13",
+      "usage": {
+        "input_tokens": 176,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1792,
+        "output_tokens": 31,
+        "service_tier": "standard"
+      },
+      "text": "Marker 105dcbde-independent-1: TODO sync work has the Sync API and UI update done, with the E2E test still pending.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "580c5fd30d20c3f1846fa1e04c4098b1bea82fa56b9f3a800835cf58bd44bec9",
+      "finishedAt": "2026-11-10T09:36:39.420Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "4cef9792-5e79-4cfc-939b-c37e126d151d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:39.988Z",
+      "responseId": "abd63fa6-de46-452a-ae94-bcc9d0a3ec80",
+      "usage": {
+        "input_tokens": 584,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1280,
+        "output_tokens": 87,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_zHh4eDr56K8vEYkZf2qd8763",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Scope",
+                "status": "completed"
+              },
+              {
+                "content": "Test",
+                "status": "pending"
+              },
+              {
+                "content": "Docs",
+                "status": "pending"
+              },
+              {
+                "content": "Release",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "106023700b8e0229afaea0abe8182511df33a4119506d96875adda92bd3d4405",
+      "finishedAt": "2026-11-10T09:36:41.308Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "4cef9792-5e79-4cfc-939b-c37e126d151d",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:41.345Z",
+      "responseId": "7502c32b-32e3-4732-968f-3b0e2f959a16",
+      "usage": {
+        "input_tokens": 187,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1792,
+        "output_tokens": 41,
+        "service_tier": "standard"
+      },
+      "text": "I created the four-item DSH release checklist (Scope done, and Test, Docs and Release pending) for the marker 105dcbde-independent-2 session. I did not open any files.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "ad2f2accd878e4369d75a28011dca93ddfa061fefd3ad920ca92b74d04b38786",
+      "finishedAt": "2026-11-10T09:36:46.005Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "74a058d2-3f64-4434-a385-585d266f502e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:50.266Z",
+      "responseId": "8909efe4-e7c7-47b4-8d2e-f9d02b1d3073",
+      "usage": {
+        "input_tokens": 144,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 85,
+        "service_tier": "standard"
+      },
+      "text": "",
+      "toolCalls": [
+        {
+          "id": "call_00_Yr4Sy7SuNX29kJhCpMSG8325",
+          "name": "todo_write",
+          "arguments": {
+            "todos": [
+              {
+                "content": "Review current UI issues",
+                "status": "completed"
+              },
+              {
+                "content": "Design simplified thread layout",
+                "status": "completed"
+              },
+              {
+                "content": "Run a quick user test",
+                "status": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "tool_use",
+      "complete": true,
+      "responseSha256": "ce776bb79c2bd9278f47fda3cace9e4571eadbe8a5452fb78fe6cd644377b330",
+      "finishedAt": "2026-11-10T09:36:57.369Z"
+    },
+    {
+      "endpoint": "https://api.deepseek.com/anthropic/v1/messages",
+      "sessionId": "74a058d2-3f64-4434-a385-585d266f502e",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:57.416Z",
+      "responseId": "55a69851-9e9d-4243-b74d-3b13c816a3cb",
+      "usage": {
+        "input_tokens": 257,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 2304,
+        "output_tokens": 62,
+        "service_tier": "standard"
+      },
+      "text": "**Nonce:** 105dcbde. **Thread width:** 870 px (1470 − 240 navigation − 360 history). **Task status:** Review current UI issues is complete, and Design simplified thread layout is now marked complete; Run a quick user test remains pending for the next step.",
+      "toolCalls": [],
+      "httpStatus": 200,
+      "requestId": null,
+      "stopReason": "end_turn",
+      "complete": true,
+      "responseSha256": "f277f85a894b052e892f6f9afabb6fb926a1d7cbb040b4c00d5b959a27d9351e",
+      "finishedAt": "2026-11-10T09:36:58.903Z"
+    }
+  ],
+  "usage": [
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:18.915Z",
+      "usage": {
+        "inputTokens": 623,
+        "outputTokens": 54,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1957
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:25.299Z",
+      "usage": {
+        "inputTokens": 140,
+        "outputTokens": 87,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2147
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:26.883Z",
+      "usage": {
+        "inputTokens": 255,
+        "outputTokens": 85,
+        "cacheReadTokens": 1920,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2260
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:28.346Z",
+      "usage": {
+        "inputTokens": 240,
+        "outputTokens": 89,
+        "cacheReadTokens": 2048,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2377
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:30.616Z",
+      "usage": {
+        "inputTokens": 578,
+        "outputTokens": 77,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1935
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:35.106Z",
+      "usage": {
+        "inputTokens": 171,
+        "outputTokens": 31,
+        "cacheReadTokens": 1792,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1994
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:37.054Z",
+      "usage": {
+        "inputTokens": 580,
+        "outputTokens": 80,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1940
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:38.327Z",
+      "usage": {
+        "inputTokens": 176,
+        "outputTokens": 31,
+        "cacheReadTokens": 1792,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1999
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:39.982Z",
+      "usage": {
+        "inputTokens": 584,
+        "outputTokens": 87,
+        "cacheReadTokens": 1280,
+        "cacheWriteTokens": 0,
+        "totalTokens": 1951
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:41.341Z",
+      "usage": {
+        "inputTokens": 187,
+        "outputTokens": 41,
+        "cacheReadTokens": 1792,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2020
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:50.262Z",
+      "usage": {
+        "inputTokens": 144,
+        "outputTokens": 85,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2533
+      }
+    },
+    {
+      "provider": "deepseek-official",
+      "model": "deepseek-flash",
+      "at": "2026-11-10T09:36:57.407Z",
+      "usage": {
+        "inputTokens": 257,
+        "outputTokens": 62,
+        "cacheReadTokens": 2304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2623
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "finalAssistantText": "**Nonce:** 105dcbde. **Thread width:** 870 px (1470 − 240 navigation − 360 history). **Task status:** Review current UI issues is complete, and Design simplified thread layout is now marked complete; Run a quick user test remains pending for the next step.",
+  "finalTodos": [
+    {
+      "content": "Review current UI issues",
+      "status": "completed"
+    },
+    {
+      "content": "Design simplified thread layout",
+      "status": "completed"
+    },
+    {
+      "content": "Run a quick user test",
+      "status": "pending"
+    }
+  ],
+  "screenshots": {
+    "01-empty.png": "e950143ed56e97f7f0b1fe2714779bcc1ab015c331eb67267a5a1433d480223c",
+    "02-first-thread.png": "ff21cd69222f4b21981c4931075e5d14a41e9d44ca1b11a4da26ca5ee919a91d",
+    "03-desktop.png": "b546f488f837e1176e0824eb4ed6a4dffe3f27b98ac4373fa4f101eaf684b8b6",
+    "04-reload.png": "442c9c686834ff50f23a6b188510a3f6a4d1efe99daa7f0ae416b8d24fdb8316",
+    "05-mobile.png": "46d481b6d1933602a7414f0504fd592fad706d2ec80778da6dcca9d86e08670e",
+    "05-mobile-list.png": "3ab4740c89eed4f0a67bedeafba7de1ff35228fc37901defefe6e76d24589651",
+    "06-dark.png": "c920cd3682c5e9cbbe4ddce60879a648da802a14727a2246ee3e7ebfff69fb3b",
+    "07-final.png": "b546f488f837e1176e0824eb4ed6a4dffe3f27b98ac4373fa4f101eaf684b8b6",
+    "08-native-settings.png": "e7646e621962fa6d9984063e0d2d1cc639c6e892628070bff2d736c908943474"
+  }
+}
