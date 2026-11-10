@@ -1,14 +1,16 @@
-# DSH Slack
+# DSH Slack plugin for DeepSeek Harness
 
-Slack-style session threads for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Each message in the Chats composer starts a new session. Reply in the selected Thread to keep its conversation context.
+DSH Slack is an open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin for Slack-style chat threads, session history, assistant summaries, and TODO progress. Start a separate session for each new task, then reply in its Thread to keep the conversation context.
 
 [中文说明](README.zh-CN.md)
+
+[Install](#install) · [Features](#features) · [Real API verification](#verify) · [FAQ](#faq) · [Troubleshooting](#troubleshooting)
 
 The compact list shows a title, the latest committed assistant summary and real TODO progress. The Thread uses DSH's native conversation renderer, Markdown, tool calls, TODO panel and composer.
 
 ![Real English DSH: launch Thread with its conversation and 2/3 TODO progress](docs/media/en/snapshot.png)
 
-### Watch the feature in 8 seconds
+## Watch real DSH threads in 8 seconds
 
 Select **Plan the launch** in the history list, then expand its native TODO list. The Thread keeps the earlier reply and the updated **2/3** progress. The workshop stays in its own session.
 
@@ -19,6 +21,20 @@ Select **Plan the launch** in the history list, then expand its native TODO list
 Recorded in real Chromium on the GPT Work machine with the official DeepSeek API. The short clip reopens an existing Thread. The complete recording shows both new conversations, a contextual reply and actual model waits. No speed changes or generated UI frames.
 
 This is an independent DSH plugin. It is not a Slack integration and does not require a Slack account.
+
+## Features
+
+| Task | DSH Slack behavior |
+| --- | --- |
+| Start independent tasks | Each message in the Chats composer creates a new DSH session. |
+| Continue a conversation | Replies in the selected Thread keep the same session and context. |
+| Scan chat history | Session entries show the title, assistant summary, and TODO completion count. |
+| Track task progress | The list and native TODO panel read the same persisted task events. |
+| Return after a reload | DSH persistence restores the selected session and conversation. |
+| Use native DSH tools | Keep the host's Markdown renderer, tool calls, TODO panel, and composer. |
+| Open host settings | Switch to **Native DSH** for Settings and Plugins, then return with your draft preserved. |
+
+See [design QA](docs/design-qa.md) for desktop, mobile, and theme checks.
 
 ## Install
 
@@ -53,6 +69,7 @@ Fast checks use the projection reducer and the distributable package. Final acce
 
 ```sh
 npm run verify
+npm run verify:media
 DSH_SOURCE_ROOT=/absolute/path/to/built/deepseek-harness \
 DSH_API_KEY_FILE=/private/path/to/deepseek.key \
 npm run verify:live
@@ -69,4 +86,34 @@ See [the verification report](docs/verification.md) and [design QA](docs/design-
 
 DSH's plugin API is pre-stable. This package targets the pinned version above. The host owns tools, model requests and persistence. Install this plugin only into profiles where you intend to use the threaded navigation.
 
-MIT license.
+## FAQ
+
+### Is DSH Slack a Slack bot or Slack integration?
+
+No. It is a Web UI plugin for DeepSeek Harness. It runs inside DSH and uses the host's sessions and tools.
+
+### Does it support shared channels or an @deepseek trigger?
+
+Shared human chat channels, mention-only execution, and cross-session channel memory are outside this version. Each new message in the Chats composer starts a session. Thread replies continue the selected session.
+
+### Where are my conversations and API key stored?
+
+Conversations use normal DSH persistence. Configure your DeepSeek API credential in the host settings. The plugin does not read the key in browser code or send analytics.
+
+### Are the screenshots and videos real?
+
+Yes. Both language versions come from real Chromium with the official DeepSeek API. The [recording evidence](docs/media/README.md) links response records, source hashes, full recordings, and media QA. The 8-second clips show navigation and TODO expansion. Full recordings include actual model waits.
+
+## Troubleshooting
+
+| Symptom | Check |
+| --- | --- |
+| The plugin does not appear | Use the tested DSH version, install the package into the Web profile, and enable its bundle in Plugins. |
+| Model replies do not start | Open **Native DSH** and check the host's DeepSeek credential and provider configuration. |
+| A session has no TODO count | TODOs appear after the model writes native tasks. The plugin does not invent tasks for empty sessions. |
+| You need Settings or Plugins | Select **Native DSH** in the lower navigation. Select **Open DSH Slack** to return. |
+| An upstream DSH upgrade breaks the UI | Recheck compatibility with the pinned revision and run the real API acceptance test. |
+
+## Project and license
+
+Source and maintenance: [liush2yuxjtu/dsh-slack](https://github.com/liush2yuxjtu/dsh-slack). This independent community plugin uses the [MIT license](LICENSE).
