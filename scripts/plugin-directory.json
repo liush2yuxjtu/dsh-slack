@@ -1,0 +1,138 @@
+{
+  "checkedAt": "2026-11-13",
+  "plugins": [
+    {
+      "id": "sidebar",
+      "title": "Sidebar History",
+      "repo": "https://github.com/liush2yuxjtu/dsh-sidebar-history",
+      "source": "npm",
+      "need": {
+        "en": "Find progress without reopening every session",
+        "zh": "在历史列表直接看任务进度与最新回复。"
+      },
+      "description": {
+        "en": "Session cards with native TODO progress and the latest saved assistant reply.",
+        "zh": "会话卡片显示原生 TODO 进度与最新已保存助手回复。"
+      },
+      "limit": {
+        "zh": "遥测默认关闭。测试事件不代表真实用户量；未单独证明与其他布局插件的组合兼容性。",
+        "en": "Telemetry is opt-in. Test events are not adoption. Combined layouts were not independently verified."
+      },
+      "steps": [
+        "在历史侧栏打开任务卡片，查看最新回复与真实 TODO 完成数。",
+        "若需验证模型链路，在 Host 配好凭据后发送一个明确任务，等待真实回复。",
+        "刷新页面，确认同一会话的已保存回复与进度可再次打开。"
+      ],
+      "readme": "https://github.com/liush2yuxjtu/dsh-sidebar-history#readme",
+      "version": "0.2.3",
+      "name": "dsh-sidebar-history",
+      "engines": {
+        "dsh": ">=0.2.2-rc.1 <0.3.0",
+        "node": ">=24.9.0"
+      },
+      "publishTimestamp": 1794328479,
+      "install": "dsh plugin --profile web add dsh-sidebar-history@0.2.3\ndsh web"
+    },
+    {
+      "id": "slack",
+      "title": "DSH Slack UI",
+      "repo": "https://github.com/liush2yuxjtu/dsh-slack",
+      "source": "git",
+      "commit": "289612132d17e87acc761c5c336eee1af0f5cf45",
+      "need": {
+        "en": "Keep independent tasks in separate threads",
+        "zh": "为不同任务保留各自的 Thread 与上下文。"
+      },
+      "description": {
+        "en": "Slack-style DSH sessions, contextual thread replies, summaries and native TODO progress.",
+        "zh": "Slack 风格的 DSH 会话、Thread 续聊、摘要与原生 TODO 进度。"
+      },
+      "limit": {
+        "zh": "不连接 Slack 服务；与 Channels 二选一。每条根消息创建新 Session，Thread 回复继续当前 Session。",
+        "en": "Not a Slack service integration. Choose this or Channels. Root messages start sessions; thread replies continue them."
+      },
+      "steps": [
+        "打开 Chats，在列表底部输入框发送一个新任务，确认新建独立 Session。",
+        "选中该任务，在右侧 Thread 输入框续聊，确认保留上下文。",
+        "刷新后重新选择任务，确认历史和 TODO 可恢复；Native DSH 可返回设置。"
+      ],
+      "readme": "https://github.com/liush2yuxjtu/dsh-slack/blob/289612132d17e87acc761c5c336eee1af0f5cf45/README.md",
+      "install": "dsh plugin --profile web add 'git+https://github.com/liush2yuxjtu/dsh-slack.git#289612132d17e87acc761c5c336eee1af0f5cf45'\ndsh web",
+      "version": "0.1.0",
+      "name": "dsh-slack",
+      "engines": {
+        "node": ">=24.9.0",
+        "dsh": ">=0.2.2-rc.1 <0.3.0"
+      },
+      "publishTimestamp": 1794324447
+    },
+    {
+      "id": "channels",
+      "title": "DSH Channels",
+      "repo": "https://github.com/liush2yuxjtu/dsh-channels",
+      "source": "git",
+      "commit": "a6662dafc209e7ae7d39d35dc24a59515acfd797",
+      "need": {
+        "en": "Discuss first, mention DeepSeek for action",
+        "zh": "正常频道聊天，需要执行时才 @deepseek。"
+      },
+      "description": {
+        "en": "Channel chat and persistent mission threads with explicit mention-only execution.",
+        "zh": "频道讨论、持久 Mission Thread 与仅明确提及时执行 Agent。"
+      },
+      "limit": {
+        "zh": "可信 Host 的 Alpha。频道邀请不隔离 Host owner 的其他会话权限；普通 Thread 回复不调用模型。",
+        "en": "Trusted-Host alpha. Invitations do not isolate wider Host-owner access. Ordinary thread replies do not invoke the model."
+      },
+      "steps": [
+        "打开 Channels，先发送普通消息，确认只保存人类讨论。",
+        "发送 @deepseek 加具体任务，确认创建 Mission Thread 与独立 Session。",
+        "在该 Thread 再次 @deepseek 续办；普通回复只留团队备注。",
+        "刷新并重开任务，检查历史、回复和 TODO。只邀请可信 Host 使用者。"
+      ],
+      "readme": "https://github.com/liush2yuxjtu/dsh-channels/blob/a6662dafc209e7ae7d39d35dc24a59515acfd797/README.md",
+      "install": "dsh plugin --profile web add 'git+https://github.com/liush2yuxjtu/dsh-channels.git#a6662dafc209e7ae7d39d35dc24a59515acfd797'\ndsh web",
+      "version": "0.1.0",
+      "name": "dsh-channels",
+      "engines": {
+        "node": ">=24.9.0",
+        "dsh": ">=0.2.2-rc.1 <0.3.0"
+      },
+      "publishTimestamp": 1794324287
+    },
+    {
+      "id": "artifacts",
+      "title": "DSH Artifacts",
+      "repo": "https://github.com/liush2yuxjtu/dsh-artifacts-extension",
+      "source": "git",
+      "commit": "9826d31d7838a468e54881d11e4f5f3970d29c29",
+      "need": {
+        "en": "Find and preview saved HTML artifacts",
+        "zh": "搜索并打开已有的本地 HTML 成果。"
+      },
+      "description": {
+        "en": "Read-only local HTML library with search, tags and interactive preview.",
+        "zh": "只读本地 HTML 成果库，支持搜索、标签和交互预览。"
+      },
+      "limit": {
+        "zh": "当前0.1.3需要已配置的 artifact-store 和本地缓存。创建、存储、Tweaks 的三个外部 skills 未随包交付；多类型编辑器尚未发布。",
+        "en": "Requires a configured artifact-store and local cache. Creation, storage and Tweaks skills are external. The new multi-type editor is not released."
+      },
+      "steps": [
+        "已有 artifact-store 配置和缓存时，打开 Artifacts，按标题或标签搜索已有成果。",
+        "选中成果，检查 HTML 交互预览；需要 localStorage 时新标签打开。",
+        "复制文件路径，外部更新后点击 Refresh。",
+        "如果尚无 store，按仓库 README 配置既有 artifact-store skill；仅安装此包不会自动提供三个创作 skills。"
+      ],
+      "readme": "https://github.com/liush2yuxjtu/dsh-artifacts-extension/blob/9826d31d7838a468e54881d11e4f5f3970d29c29/README.md",
+      "install": "dsh plugin --profile web add 'git+https://github.com/liush2yuxjtu/dsh-artifacts-extension.git#9826d31d7838a468e54881d11e4f5f3970d29c29'\ndsh web",
+      "version": "0.1.3",
+      "name": "@local/dsh-artifacts",
+      "engines": {
+        "dsh": ">=0.2.1-rc.2",
+        "node": ">=22"
+      },
+      "publishTimestamp": 1794328673
+    }
+  ]
+}

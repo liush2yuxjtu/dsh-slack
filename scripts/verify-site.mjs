@@ -44,7 +44,9 @@ for (const path of paths) {
   }
 }
 const sitemap = await readFile(join(root, 'docs/sitemap.xml'), 'utf8');
-assert.equal((sitemap.match(/<url>/g) || []).length, 8);
+assert.equal((sitemap.match(/<url>/g) || []).length, paths.length * 2 + 2);
 assert.equal((sitemap.match(/<video:video>/g) || []).length, 2);
 assert.ok(!sitemap.includes('localhost'));
 console.log(`PASS: ${titles.size} pages, ${links} references, canonical and language links, sitemap, verification tag, and real video metadata.`);
+
+await import('./verify-plugin-directory.mjs');

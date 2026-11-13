@@ -1,5 +1,7 @@
 # DSH Slack UI 插件：DeepSeek Harness 会话历史与 Thread
 
+[按任务选择 DSH 插件并完成首次使用](https://liush2yuxjtu.github.io/dsh-slack/plugins/index.html)。目录包含固定公开版本的 Discover 索引；Slack UI 与 Channels 二选一。
+
 DSH Slack UI 是开源的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 插件，提供 Slack 风格的 Thread、会话历史、助手摘要和 TODO 待办进度。
 
 在「对话」列表下方发送消息，每条消息创建一个独立 session。在右侧 Thread 回复，继续当前 session。列表显示标题、最新回复摘要和真实 TODO 进度。右侧保留 DSH 原生消息、Markdown、工具和输入框。

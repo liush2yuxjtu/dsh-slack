@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Liu Shiyu DSH plugins",
+    "zh": "Liu Shiyu DSH 插件"
+  },
+  "description": {
+    "en": "Public pinned releases with first-use instructions.",
+    "zh": "公开固定版本与首次使用指南。"
+  },
+  "plugins": [
+    {
+      "name": "dsh-sidebar-history",
+      "title": "Sidebar History",
+      "description": {
+        "en": "Session cards with native TODO progress and the latest saved assistant reply.",
+        "zh": "会话卡片显示原生 TODO 进度与最新已保存助手回复。"
+      },
+      "author": "Liu Shiyu",
+      "homepage": "https://github.com/liush2yuxjtu/dsh-sidebar-history#readme",
+      "repository": {
+        "url": "https://github.com/liush2yuxjtu/dsh-sidebar-history"
+      },
+      "versions": [
+        {
+          "version": "0.2.3",
+          "publishTimestamp": 1794328479,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.1 <0.3.0",
+            "node": ">=24.9.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-slack",
+      "title": "DSH Slack UI",
+      "description": {
+        "en": "Slack-style DSH sessions, contextual thread replies, summaries and native TODO progress.",
+        "zh": "Slack 风格的 DSH 会话、Thread 续聊、摘要与原生 TODO 进度。"
+      },
+      "author": "Liu Shiyu",
+      "homepage": "https://github.com/liush2yuxjtu/dsh-slack/blob/289612132d17e87acc761c5c336eee1af0f5cf45/README.md",
+      "repository": {
+        "url": "https://github.com/liush2yuxjtu/dsh-slack"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1794324447,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/liush2yuxjtu/dsh-slack",
+            "commit": "289612132d17e87acc761c5c336eee1af0f5cf45"
+          },
+          "engines": {
+            "node": ">=24.9.0",
+            "dsh": ">=0.2.2-rc.1 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-channels",
+      "title": "DSH Channels",
+      "description": {
+        "en": "Channel chat and persistent mission threads with explicit mention-only execution.",
+        "zh": "频道讨论、持久 Mission Thread 与仅明确提及时执行 Agent。"
+      },
+      "author": "Liu Shiyu",
+      "homepage": "https://github.com/liush2yuxjtu/dsh-channels/blob/a6662dafc209e7ae7d39d35dc24a59515acfd797/README.md",
+      "repository": {
+        "url": "https://github.com/liush2yuxjtu/dsh-channels"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1794324287,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/liush2yuxjtu/dsh-channels",
+            "commit": "a6662dafc209e7ae7d39d35dc24a59515acfd797"
+          },
+          "engines": {
+            "node": ">=24.9.0",
+            "dsh": ">=0.2.2-rc.1 <0.3.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@local/dsh-artifacts",
+      "title": "DSH Artifacts",
+      "description": {
+        "en": "Read-only local HTML library with search, tags and interactive preview.",
+        "zh": "只读本地 HTML 成果库，支持搜索、标签和交互预览。"
+      },
+      "author": "Liu Shiyu",
+      "homepage": "https://github.com/liush2yuxjtu/dsh-artifacts-extension/blob/9826d31d7838a468e54881d11e4f5f3970d29c29/README.md",
+      "repository": {
+        "url": "https://github.com/liush2yuxjtu/dsh-artifacts-extension"
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1794328673,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/liush2yuxjtu/dsh-artifacts-extension",
+            "commit": "9826d31d7838a468e54881d11e4f5f3970d29c29"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2",
+            "node": ">=22"
+          }
+        }
+      ]
+    }
+  ]
+}
